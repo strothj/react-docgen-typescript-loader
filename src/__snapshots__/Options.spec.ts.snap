@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validateOptions throws on include not being array of strings 1`] = `"react-docgen-typescript-webpack-plugin: .includes should be array"`;
+
+exports[`validateOptions throws on include not being array of strings 2`] = `"react-docgen-typescript-webpack-plugin: .includes[0] should be object"`;
+
+exports[`validateOptions throws on non-object 1`] = `"react-docgen-typescript-webpack-plugin: should be object"`;
+
+exports[`validateOptions throws on unexpected property 1`] = `"react-docgen-typescript-webpack-plugin: should NOT have additional properties"`;
