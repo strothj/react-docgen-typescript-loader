@@ -106,7 +106,7 @@ try {
   (exports.${displayName} || ${displayName}).displayName = "${displayName}";
 
   (exports.${displayName} || ${displayName}).__docgenInfo = {
-    description: "${addSlashes(description)}",
+    description: "${escapeString(description)}",
     displayName: "${displayName}",
     props: {
       ${Object.entries(props)
@@ -114,15 +114,15 @@ try {
           ([propName, prop]) =>
             `${propName}: {
           defaultValue: null,
-          description: "${addSlashes(prop.description)}",
+          description: "${escapeString(prop.description)}",
           name: "${prop.name}",
           required: ${prop.required ? "true" : "false"},
           type: {
-            name: "${addSlashes(prop.type.name)}"
+            name: "${escapeString(prop.type.name)}"
           }
         }`,
         )
-        .join("\n")}
+        .join(",\n")}
     }
   }
 
@@ -133,7 +133,7 @@ try {
     ${docgenCollectionName}["${docgenCollectionKeyBase}#${displayName}"] = {
       name: "${displayName}",
       docgenInfo: (exports.${displayName} || ${displayName}).__docgenInfo,
-      path: "${addSlashes(docgenCollectionKeyBase)}"
+      path: "${escapeString(docgenCollectionKeyBase)}"
     }
   }
   `
@@ -144,9 +144,13 @@ try {
 }
 
 // Add escapes for quotes in strings.
+// Replace newlines with \n.
 // See: https://stackoverflow.com/questions/770523/escaping-strings-in-javascript
-function addSlashes(str: string): string {
-  return (str + "").replace(/[\\"']/g, "\\$&").replace(/\u0000/g, "\\0");
+function escapeString(str: string): string {
+  return (str + "")
+    .replace(/[\\"']/g, "\\$&")
+    .replace(/\u0000/g, "\\0")
+    .replace(/\n/g, "\\n");
 }
 
 function verboseLog(message: string) {
