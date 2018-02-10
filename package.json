@@ -1,6 +1,6 @@
 {
   "name": "react-docgen-typescript-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webpack plugin to generate docgen information from Typescript React components.",
   "keywords": [
     "storybook",
