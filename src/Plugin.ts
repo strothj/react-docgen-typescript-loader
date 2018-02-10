@@ -1,7 +1,7 @@
-import * as path from "path";
 import * as webpack from "webpack";
-import { parse, ComponentDoc } from "react-docgen-typescript/lib/parser.js";
+import { parse } from "react-docgen-typescript/lib/parser.js";
 import { validateOptions, Options } from "./Options";
+import generateDocgenCodeBlock from "./generateDocgenCodeBlock";
 
 class Plugin implements webpack.Plugin {
   private options: {
@@ -89,68 +89,6 @@ function processModule(module: any, docgenCollectionName: string | null) {
       "\n";
   });
   module._source._value = source;
-}
-
-function generateDocgenCodeBlock(
-  componentDoc: ComponentDoc,
-  filename: string,
-  docgenCollectionName: string | null,
-): string {
-  const { displayName, description, props } = componentDoc;
-  const docgenCollectionKeyBase = path
-    .relative("./", path.resolve("./", filename))
-    .replace(/\\/g, "/");
-
-  return `
-try {
-  (exports.${displayName} || ${displayName}).displayName = "${displayName}";
-
-  (exports.${displayName} || ${displayName}).__docgenInfo = {
-    description: "${escapeString(description)}",
-    displayName: "${displayName}",
-    props: {
-      ${Object.entries(props)
-        .map(
-          ([propName, prop]) =>
-            `${propName}: {
-          defaultValue: null,
-          description: "${escapeString(prop.description)}",
-          name: "${prop.name}",
-          required: ${prop.required ? "true" : "false"},
-          type: {
-            name: "${escapeString(prop.type.name)}"
-          }
-        }`,
-        )
-        .join(",\n")}
-    }
-  }
-
-  ${
-    docgenCollectionName
-      ? `
-  if (typeof ${docgenCollectionName} !== "undefined") {
-    ${docgenCollectionName}["${docgenCollectionKeyBase}#${displayName}"] = {
-      name: "${displayName}",
-      docgenInfo: (exports.${displayName} || ${displayName}).__docgenInfo,
-      path: "${escapeString(docgenCollectionKeyBase)}"
-    }
-  }
-  `
-      : ""
-  }
-} catch (e) {}
-  `;
-}
-
-// Add escapes for quotes in strings.
-// Replace newlines with \n.
-// See: https://stackoverflow.com/questions/770523/escaping-strings-in-javascript
-function escapeString(str: string): string {
-  return (str + "")
-    .replace(/[\\"']/g, "\\$&")
-    .replace(/\u0000/g, "\\0")
-    .replace(/\n/g, "\\n");
 }
 
 function verboseLog(message: string) {

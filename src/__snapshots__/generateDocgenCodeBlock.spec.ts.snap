@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`escapes newlines in description text 1`] = `
+Object {
+  "STORYBOOK_REACT_CLASSES": Object {
+    "Component.tsx#Component": Object {
+      "docgenInfo": Object {
+        "description": "A component.",
+        "displayName": "Component",
+        "props": Object {
+          "someProps": Object {
+            "defaultValue": null,
+            "description": "Prop description
+Second line",
+            "name": "someProp",
+            "required": true,
+            "type": Object {
+              "name": "string",
+            },
+          },
+        },
+      },
+      "name": "Component",
+      "path": "Component.tsx",
+    },
+  },
+}
+`;
+
+exports[`renders multiple props 1`] = `
+Object {
+  "STORYBOOK_REACT_CLASSES": Object {
+    "Component.tsx#Component": Object {
+      "docgenInfo": Object {
+        "description": "A component.",
+        "displayName": "Component",
+        "props": Object {
+          "otherProp": Object {
+            "defaultValue": null,
+            "description": "Other prop description",
+            "name": "otherProp",
+            "required": false,
+            "type": Object {
+              "name": "boolean",
+            },
+          },
+          "someProp": Object {
+            "defaultValue": null,
+            "description": "Prop description",
+            "name": "someProp",
+            "required": true,
+            "type": Object {
+              "name": "string",
+            },
+          },
+        },
+      },
+      "name": "Component",
+      "path": "Component.tsx",
+    },
+  },
+}
+`;
+
+exports[`renders normal single prop 1`] = `
+Object {
+  "STORYBOOK_REACT_CLASSES": Object {
+    "Component.tsx#Component": Object {
+      "docgenInfo": Object {
+        "description": "A component.",
+        "displayName": "Component",
+        "props": Object {
+          "someProp": Object {
+            "defaultValue": null,
+            "description": "Prop description",
+            "name": "someProp",
+            "required": true,
+            "type": Object {
+              "name": "string",
+            },
+          },
+        },
+      },
+      "name": "Component",
+      "path": "Component.tsx",
+    },
+  },
+}
+`;
+
+exports[`renders prop with hyphen 1`] = `
+Object {
+  "STORYBOOK_REACT_CLASSES": Object {
+    "Component.tsx#Component": Object {
+      "docgenInfo": Object {
+        "description": "A component.",
+        "displayName": "Component",
+        "props": Object {
+          "some-prop": Object {
+            "defaultValue": null,
+            "description": "Prop description",
+            "name": "someProp",
+            "required": true,
+            "type": Object {
+              "name": "string",
+            },
+          },
+        },
+      },
+      "name": "Component",
+      "path": "Component.tsx",
+    },
+  },
+}
+`;

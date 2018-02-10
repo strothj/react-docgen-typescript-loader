@@ -105,7 +105,7 @@ try {
     description: \\"This is a React component.\\",
     displayName: \\"ReactComponent\\",
     props: {
-      color: {
+      \\"color\\": {
           defaultValue: null,
           description: \\"Color of button.\\",
           name: \\"color\\",
