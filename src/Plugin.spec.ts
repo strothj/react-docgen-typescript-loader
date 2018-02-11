@@ -4,7 +4,7 @@ import MemoryFS = require("memory-fs");
 import Plugin from "./Plugin";
 
 it("compiles", async () => {
-  const contents = await compileFixture("Component.tsx");
+  const contents = await compileFixture("StandardComponent.tsx");
   expect(contents).toMatchSnapshot();
 });
 
@@ -44,7 +44,7 @@ function compileFixture(filename: string): Promise<string> {
 function createWebpackConfig(filename: string): webpack.Configuration {
   return {
     context: path.resolve(__dirname, ".."),
-    entry: path.resolve(__dirname, `./__fixtures__/${filename}`),
+    entry: path.resolve(__dirname, `./__fixtures__/components/${filename}`),
     output: {
       filename: "component.js",
       path: "/dist",

@@ -119,10 +119,10 @@ try {
 
   
   if (typeof STORYBOOK_REACT_CLASSES !== \\"undefined\\") {
-    STORYBOOK_REACT_CLASSES[\\"src/__fixtures__/Component.tsx#ReactComponent\\"] = {
+    STORYBOOK_REACT_CLASSES[\\"src/__fixtures__/components/StandardComponent.tsx#ReactComponent\\"] = {
       name: \\"ReactComponent\\",
       docgenInfo: (exports.ReactComponent || ReactComponent).__docgenInfo,
-      path: \\"src/__fixtures__/Component.tsx\\"
+      path: \\"src/__fixtures__/components/StandardComponent.tsx\\"
     }
   }
   
