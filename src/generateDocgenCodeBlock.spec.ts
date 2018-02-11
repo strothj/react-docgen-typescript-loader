@@ -4,6 +4,8 @@ import singlePropComponentDoc from "./__fixtures__/component-docs/singleProp";
 import multiPropComponentDoc from "./__fixtures__/component-docs/multipleProps";
 import hyphenatedPropNameComponentDoc from "./__fixtures__/component-docs/hyphenatedPropName";
 import multilineDescriptionComponentDoc from "./__fixtures__/component-docs/multilineDescription";
+import multilinePropDescriptionComponentDoc from "./__fixtures__/component-docs/multilinePropDescription";
+import multilinePropDescription2ComponentDoc from "./__fixtures__/component-docs/multilinePropDescription2";
 import generateDocgenCodeBlock from "./generateDocgenCodeBlock";
 
 it("renders normal single prop", () => {
@@ -30,6 +32,14 @@ it("renders prop with hyphen", () => {
 it("escapes newlines in description text", () => {
   const sandbox = executeGeneratedCode(multilineDescriptionComponentDoc);
 
+  expect(sandbox).toMatchSnapshot();
+});
+
+it("escapes multiline prop description", () => {
+  let sandbox = executeGeneratedCode(multilinePropDescriptionComponentDoc);
+  expect(sandbox).toMatchSnapshot();
+
+  sandbox = executeGeneratedCode(multilinePropDescription2ComponentDoc);
   expect(sandbox).toMatchSnapshot();
 });
 

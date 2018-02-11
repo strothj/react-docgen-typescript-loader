@@ -1,10 +1,10 @@
 export default {
-  description: "A component.\nSecond line",
+  description: "A component.",
   displayName: "Component",
   props: {
-    someProps: {
+    someProp: {
       defaultValue: null,
-      description: "Prop description",
+      description: "Prop description\nSecond line",
       name: "someProp",
       required: true,
       type: {
