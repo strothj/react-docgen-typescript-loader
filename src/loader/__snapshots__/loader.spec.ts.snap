@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`throws error if used synchronously 1`] = `"react-docgen-typescript-webpack-plugin: This loader can not be used synchronously."`;

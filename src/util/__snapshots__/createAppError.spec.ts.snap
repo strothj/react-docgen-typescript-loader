@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates error from message 1`] = `
+Object {
+  "innerError": undefined,
+  "message": "react-docgen-typescript-webpack-plugin: Error Message",
+  "stack": "Error: react-docgen-typescript-webpack-plugin: Error Message
+    at createAppErrorAsJson (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\src\\\\util\\\\createAppError.spec.ts:16:66)
+    at Object.<anonymous> (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\src\\\\util\\\\createAppError.spec.ts:12:10)
+    at Object.asyncFn (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\node_modules\\\\jest-jasmine2\\\\build\\\\jasmine_async.js:129:432)
+    at resolve (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\node_modules\\\\jest-jasmine2\\\\build\\\\queue_runner.js:51:12)
+    at new Promise (<anonymous>)
+    at mapper (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\node_modules\\\\jest-jasmine2\\\\build\\\\queue_runner.js:40:274)
+    at promise.then (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\node_modules\\\\jest-jasmine2\\\\build\\\\queue_runner.js:83:39)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)",
+}
+`;
+
+exports[`returns an error when no error object is provided 1`] = `
+Object {
+  "innerError": undefined,
+  "message": "react-docgen-typescript-webpack-plugin: An unexpected error has occurred.",
+  "stack": "Error: react-docgen-typescript-webpack-plugin: An unexpected error has occurred.
+    at createAppErrorAsJson (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\src\\\\util\\\\createAppError.spec.ts:16:66)
+    at Object.<anonymous> (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\src\\\\util\\\\createAppError.spec.ts:4:10)
+    at Object.asyncFn (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\node_modules\\\\jest-jasmine2\\\\build\\\\jasmine_async.js:129:432)
+    at resolve (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\node_modules\\\\jest-jasmine2\\\\build\\\\queue_runner.js:51:12)
+    at new Promise (<anonymous>)
+    at mapper (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\node_modules\\\\jest-jasmine2\\\\build\\\\queue_runner.js:40:274)
+    at promise.then (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\node_modules\\\\jest-jasmine2\\\\build\\\\queue_runner.js:83:39)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)",
+}
+`;
+
+exports[`wraps a provided error object 1`] = `
+Object {
+  "innerError": "Provided Error",
+  "message": "react-docgen-typescript-webpack-plugin: Provided Error",
+  "stack": "Error: react-docgen-typescript-webpack-plugin: Provided Error
+    at createAppErrorAsJson (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\src\\\\util\\\\createAppError.spec.ts:16:66)
+    at Object.<anonymous> (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\src\\\\util\\\\createAppError.spec.ts:8:10)
+    at Object.asyncFn (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\node_modules\\\\jest-jasmine2\\\\build\\\\jasmine_async.js:129:432)
+    at resolve (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\node_modules\\\\jest-jasmine2\\\\build\\\\queue_runner.js:51:12)
+    at new Promise (<anonymous>)
+    at mapper (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\node_modules\\\\jest-jasmine2\\\\build\\\\queue_runner.js:40:274)
+    at promise.then (C:\\\\Users\\\\Jason\\\\code\\\\public\\\\react-docgen-typescript-webpack-plugin\\\\node_modules\\\\jest-jasmine2\\\\build\\\\queue_runner.js:83:39)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)",
+}
+`;
