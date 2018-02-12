@@ -1,6 +1,396 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`compiles using Webpack 1`] = `
+exports[`all component fixtures compile successfully fixture: HyphenatedPropName.tsx 1`] = `
+"/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = \\"\\";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+\\"use strict\\";
+
+Object.defineProperty(exports, \\"__esModule\\", { value: true });
+var React = __webpack_require__(1);
+/**
+ * A component with a hyphenated prop name.
+ */
+exports.HyphenatedPropNameComponent = function (props) { return (React.createElement(\\"button\\", { style: { backgroundColor: props[\\"button-color\\"] } }, props.children)); };
+try {
+    exports.HyphenatedPropNameComponent.displayName = \\"HyphenatedPropNameComponent\\";
+    exports.HyphenatedPropNameComponent.__docgenInfo = { \\"description\\": \\"A component with a hyphenated prop name.\\", \\"displayName\\": \\"HyphenatedPropNameComponent\\", \\"props\\": { \\"button-color\\": { \\"defaultValue\\": null, \\"description\\": \\"Button color.\\", \\"name\\": \\"button-color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } } } };
+    if (typeof STORYBOOK_REACT_CLASSES !== \\"undefined\\")
+        STORYBOOK_REACT_CLASSES[\\"src/loader/__fixtures__/components/HyphenatedPropName.tsx#HyphenatedPropNameComponent\\"] = { name: \\"HyphenatedPropNameComponent\\" };
+}
+catch (__react_docgen_typescript_loader_error) { }
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = react;
+
+/***/ })
+/******/ ]);"
+`;
+
+exports[`all component fixtures compile successfully fixture: MultiProps.tsx 1`] = `
+"/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = \\"\\";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+\\"use strict\\";
+
+Object.defineProperty(exports, \\"__esModule\\", { value: true });
+var React = __webpack_require__(1);
+/**
+ * This is a component with multiple props.
+ */
+exports.MultiPropsComponent = function (props) { return (React.createElement(\\"button\\", { style: { backgroundColor: props.color } }, props.children)); };
+try {
+    exports.MultiPropsComponent.displayName = \\"MultiPropsComponent\\";
+    exports.MultiPropsComponent.__docgenInfo = { \\"description\\": \\"This is a component with multiple props.\\", \\"displayName\\": \\"MultiPropsComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": null, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } }, \\"size\\": { \\"defaultValue\\": null, \\"description\\": \\"Button size.\\", \\"name\\": \\"size\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"small\\\\\\" | \\\\\\"large\\\\\\"\\" } } } };
+    if (typeof STORYBOOK_REACT_CLASSES !== \\"undefined\\")
+        STORYBOOK_REACT_CLASSES[\\"src/loader/__fixtures__/components/MultiProps.tsx#MultiPropsComponent\\"] = { name: \\"MultiPropsComponent\\" };
+}
+catch (__react_docgen_typescript_loader_error) { }
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = react;
+
+/***/ })
+/******/ ]);"
+`;
+
+exports[`all component fixtures compile successfully fixture: MultilineDescription.tsx 1`] = `
+"/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = \\"\\";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+\\"use strict\\";
+
+Object.defineProperty(exports, \\"__esModule\\", { value: true });
+var React = __webpack_require__(1);
+/**
+ * A component with a multiline description.
+ *
+ * Second line.
+ */
+exports.MultilineDescriptionComponent = function (props) { return (React.createElement(\\"button\\", { style: { backgroundColor: props.color } }, props.children)); };
+try {
+    exports.MultilineDescriptionComponent.displayName = \\"MultilineDescriptionComponent\\";
+    exports.MultilineDescriptionComponent.__docgenInfo = { \\"description\\": \\"A component with a multiline description.\\\\n\\\\nSecond line.\\", \\"displayName\\": \\"MultilineDescriptionComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": null, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } } } };
+    if (typeof STORYBOOK_REACT_CLASSES !== \\"undefined\\")
+        STORYBOOK_REACT_CLASSES[\\"src/loader/__fixtures__/components/MultilineDescription.tsx#MultilineDescriptionComponent\\"] = { name: \\"MultilineDescriptionComponent\\" };
+}
+catch (__react_docgen_typescript_loader_error) { }
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = react;
+
+/***/ })
+/******/ ]);"
+`;
+
+exports[`all component fixtures compile successfully fixture: MultilinePropDescription.tsx 1`] = `
+"/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = \\"\\";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+\\"use strict\\";
+
+Object.defineProperty(exports, \\"__esModule\\", { value: true });
+var React = __webpack_require__(1);
+/**
+ * A component with multiline prop description.
+ */
+exports.MultilinePropDescriptionComponent = function (props) { return (React.createElement(\\"button\\", { style: { backgroundColor: props.color } }, props.children)); };
+try {
+    exports.MultilinePropDescriptionComponent.displayName = \\"MultilinePropDescriptionComponent\\";
+    exports.MultilinePropDescriptionComponent.__docgenInfo = { \\"description\\": \\"A component with multiline prop description.\\", \\"displayName\\": \\"MultilinePropDescriptionComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": null, \\"description\\": \\"This is a multiline prop description.\\\\n\\\\nSecond line.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } } } };
+    if (typeof STORYBOOK_REACT_CLASSES !== \\"undefined\\")
+        STORYBOOK_REACT_CLASSES[\\"src/loader/__fixtures__/components/MultilinePropDescription.tsx#MultilinePropDescriptionComponent\\"] = { name: \\"MultilinePropDescriptionComponent\\" };
+}
+catch (__react_docgen_typescript_loader_error) { }
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = react;
+
+/***/ })
+/******/ ]);"
+`;
+
+exports[`all component fixtures compile successfully fixture: Simple.tsx 1`] = `
 "/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -80,9 +470,9 @@ var React = __webpack_require__(1);
 exports.SimpleComponent = function (props) { return (React.createElement(\\"button\\", { style: { backgroundColor: props.color } }, props.children)); };
 try {
     exports.SimpleComponent.displayName = \\"SimpleComponent\\";
-    exports.SimpleComponent.__docgenInfo = { description: \\"A simple component.\\", displayName: \\"SimpleComponent\\", props: { color: { defaultValue: null, description: \\"Button color.\\", name: \\"color\\", required: true, type: { name: \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } } } };
+    exports.SimpleComponent.__docgenInfo = { \\"description\\": \\"A simple component.\\", \\"displayName\\": \\"SimpleComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": null, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } } } };
     if (typeof STORYBOOK_REACT_CLASSES !== \\"undefined\\")
-        STORYBOOK_REACT_CLASSES[\\"src/loader/__fixtures__/components/SimpleComponent.tsx#SimpleComponent\\"] = { name: \\"SimpleComponent\\" };
+        STORYBOOK_REACT_CLASSES[\\"src/loader/__fixtures__/components/Simple.tsx#SimpleComponent\\"] = { name: \\"SimpleComponent\\" };
 }
 catch (__react_docgen_typescript_loader_error) { }
 

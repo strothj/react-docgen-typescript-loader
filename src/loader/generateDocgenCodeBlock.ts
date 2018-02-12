@@ -58,49 +58,49 @@ export default function(
         ts.createObjectLiteral([
           // SimpleComponent.description.
           ts.createPropertyAssignment(
-            ts.createIdentifier("description"),
+            ts.createLiteral("description"),
             ts.createLiteral(d.description),
           ),
           // SimpleComponent.displayName.
           ts.createPropertyAssignment(
-            ts.createIdentifier("displayName"),
+            ts.createLiteral("displayName"),
             ts.createLiteral(d.displayName),
           ),
           // SimpleComponent.props.
           ts.createPropertyAssignment(
-            ts.createIdentifier("props"),
+            ts.createLiteral("props"),
             ts.createObjectLiteral(
               Object.entries(d.props).map(([propName, prop]) =>
                 ts.createPropertyAssignment(
-                  ts.createIdentifier(propName),
+                  ts.createLiteral(propName),
                   ts.createObjectLiteral([
                     // SimpleComponent.props.defaultValue
                     ts.createPropertyAssignment(
-                      ts.createIdentifier("defaultValue"),
+                      ts.createLiteral("defaultValue"),
                       ts.createNull(),
                     ),
                     // SimpleComponent.props.description
                     ts.createPropertyAssignment(
-                      ts.createIdentifier("description"),
+                      ts.createLiteral("description"),
                       ts.createLiteral(prop.description),
                     ),
                     // SimpleComponent.props.description
                     ts.createPropertyAssignment(
-                      ts.createIdentifier("name"),
+                      ts.createLiteral("name"),
                       ts.createLiteral(prop.name),
                     ),
                     // SimpleComponent.props.required
                     ts.createPropertyAssignment(
-                      ts.createIdentifier("required"),
+                      ts.createLiteral("required"),
                       prop.required ? ts.createTrue() : ts.createFalse(),
                     ),
                     // SimpleComponent.props.type.
                     ts.createPropertyAssignment(
-                      ts.createIdentifier("type"),
+                      ts.createLiteral("type"),
                       ts.createObjectLiteral([
                         // SimpleComponent.props.type.name
                         ts.createPropertyAssignment(
-                          ts.createIdentifier("name"),
+                          ts.createLiteral("name"),
                           ts.createLiteral(prop.type.name),
                         ),
                       ]),

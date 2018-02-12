@@ -1,3 +1,4 @@
+import * as fs from "fs";
 import * as path from "path";
 import * as webpack from "webpack";
 import MemoryFS = require("memory-fs");
@@ -22,9 +23,17 @@ it("marks the loader as being cacheable", () => {
   expect(mockLoaderContextCacheable.mock.calls[0][0]).toEqual(true);
 });
 
-it("compiles using Webpack", async () => {
-  const contents = await compileFixture("SimpleComponent.tsx");
-  expect(contents).toMatchSnapshot();
+describe("all component fixtures compile successfully", () => {
+  const fixtureFilenames = fs
+    .readdirSync(path.resolve(__dirname, "__fixtures__/components"))
+    .sort();
+
+  fixtureFilenames.forEach(filename => {
+    it(`fixture: ${filename}`, async () => {
+      const content = await compileFixture(filename);
+      expect(content).toMatchSnapshot();
+    });
+  });
 });
 
 // Execute loader with its "this" set to an instance of LoaderContext.
@@ -57,18 +66,21 @@ function compileFixture(filename: string): Promise<string> {
         return;
       }
 
+      const fileContents = fs.readFileSync("/dist/component.js", "utf8");
       const info = stats.toJson();
+
       if (stats.hasErrors()) {
+        console.log(fileContents);
         reject(info.errors);
         return;
       }
 
       if (stats.hasWarnings()) {
+        console.log(fileContents);
         reject(info.warnings);
         return;
       }
 
-      const fileContents = fs.readFileSync("/dist/component.js", "utf8");
       resolve(fileContents);
     });
   });
