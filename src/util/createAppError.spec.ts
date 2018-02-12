@@ -17,7 +17,7 @@ function createAppErrorAsJson(error?: string | Error) {
 
   return {
     message: appError.message,
-    stack: appError.stack,
+    stack: appError.stack && appError.stack.split("\n")[0],
     innerError: appError.innerError && appError.innerError.message,
   };
 }
