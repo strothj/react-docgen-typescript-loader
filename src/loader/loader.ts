@@ -1,25 +1,70 @@
 import * as webpack from "webpack";
-import { parse as parseComponentDocs } from "react-docgen-typescript/lib/parser.js";
+import {
+  withDefaultConfig,
+  withCustomConfig,
+  withCompilerOptions,
+  ParserOptions,
+  FileParser,
+} from "react-docgen-typescript/lib/parser.js";
 import { createAppError } from "../util";
+import LoaderOptions from "./LoaderOptions";
+import generateDocgenCodeBlock from "./generateDocgenCodeBlock";
 
 const loader: webpack.loader.Loader = function(source) {
-  // Loaders can support both synchronous and asynchronous modes. Prevent
-  // manual execution as a synchronous loader because we will be perform async
-  // operations.
-  if (!this.async)
-    throw createAppError("This loader can not be used synchronously.");
+  const callback = this.async();
 
   // Mark the loader as being cacheable since the result should be
   // deterministic.
   this.cacheable(true);
 
-  const componentDocs = parseComponentDocs(this.resourcePath);
+  const options: LoaderOptions = this.query || {};
+  options.docgenCollectionName =
+    options.docgenCollectionName || "STORYBOOK_REACT_CLASSES";
 
-  if (componentDocs.length) {
-    //
-  }
+  // Convert loader's flat options into expected structure for
+  // react-docgen-typescript.
+  // See: node_modules/react-docgen-typescript/lib/parser.d.ts
+  const parserOptions: ParserOptions = {
+    propFilter:
+      options.skipPropsWithName || options.skipPropsWithoutDoc
+        ? {
+            skipPropsWithName: options.skipPropsWithName || undefined,
+            skipPropsWithoutDoc: options.skipPropsWithoutDoc || undefined,
+          }
+        : undefined,
+  };
 
-  return source;
+  const newSource = (() => {
+    try {
+      // Configure parser using settings provided to loader.
+      // See: node_modules/react-docgen-typescript/lib/parser.d.ts
+      let parser: FileParser = withDefaultConfig(parserOptions);
+      if (options.tsconfigPath)
+        parser = withCustomConfig(options.tsconfigPath, parserOptions);
+      else if (options.compilerOptions)
+        parser = withCompilerOptions(options.compilerOptions, parserOptions);
+
+      const componentDocs = parser.parse(this.resourcePath);
+
+      // Return amended source code if there is docgen information available.
+      if (componentDocs.length) {
+        return generateDocgenCodeBlock(
+          this.resourcePath,
+          componentDocs,
+          options.docgenCollectionName,
+        );
+      }
+    } catch (e) {
+      throw createAppError(e);
+    }
+
+    // Return unchanged source code if no docgen information was available.
+    return source;
+  })();
+
+  if (!callback) return newSource;
+  callback(null, newSource);
+  return;
 };
 
 export default loader;
