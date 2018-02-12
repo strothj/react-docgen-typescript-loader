@@ -77,7 +77,14 @@ export default function(
                     // SimpleComponent.props.defaultValue
                     ts.createPropertyAssignment(
                       ts.createLiteral("defaultValue"),
-                      ts.createNull(),
+                      prop.defaultValue
+                        ? ts.createObjectLiteral([
+                            ts.createPropertyAssignment(
+                              ts.createIdentifier("value"),
+                              ts.createLiteral(prop.defaultValue.value),
+                            ),
+                          ])
+                        : ts.createNull(),
                     ),
                     // SimpleComponent.props.description
                     ts.createPropertyAssignment(
