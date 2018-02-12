@@ -102,9 +102,6 @@ function createWebpackConfig(filename: string): webpack.Configuration {
             "ts-loader",
             {
               loader: path.resolve(__dirname, "./loader"),
-              options: {
-                test: "test",
-              },
             },
           ],
         },

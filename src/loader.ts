@@ -8,6 +8,7 @@ import {
 } from "react-docgen-typescript/lib/parser.js";
 import LoaderOptions from "./LoaderOptions";
 import createAppError from "./createAppError";
+import validateOptions from "./validateOptions";
 import generateDocgenCodeBlock from "./generateDocgenCodeBlock";
 
 const loader: webpack.loader.Loader = function(source) {
@@ -18,6 +19,7 @@ const loader: webpack.loader.Loader = function(source) {
   this.cacheable(true);
 
   const options: LoaderOptions = this.query || {};
+  validateOptions(options);
   options.docgenCollectionName =
     options.docgenCollectionName || "STORYBOOK_REACT_CLASSES";
 
