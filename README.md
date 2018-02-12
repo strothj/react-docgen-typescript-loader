@@ -82,6 +82,9 @@ It is subject to the same limitations. Component docgen information can not be
 generated for components who are only exported as default. You can work around
 the issue by exporting the component using a named export.
 
+**CURRENT LIMITATION**
+The current implementation seems to have trouble with the compiler option `module` being set to `esnext`.
+
 ```javascript
 import * as React from "react";
 
