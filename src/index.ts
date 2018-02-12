@@ -1,1 +1,1 @@
-export { default } from "./plugin/Plugin";
+export { default } from "./loader";

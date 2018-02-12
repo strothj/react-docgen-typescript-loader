@@ -6,8 +6,8 @@ import {
   ParserOptions,
   FileParser,
 } from "react-docgen-typescript/lib/parser.js";
-import { createAppError } from "../util";
 import LoaderOptions from "./LoaderOptions";
+import createAppError from "./createAppError";
 import generateDocgenCodeBlock from "./generateDocgenCodeBlock";
 
 const loader: webpack.loader.Loader = function(source) {

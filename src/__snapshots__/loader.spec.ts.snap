@@ -82,7 +82,7 @@ try {
     exports.HyphenatedPropNameComponent.displayName = \\"HyphenatedPropNameComponent\\";
     exports.HyphenatedPropNameComponent.__docgenInfo = { \\"description\\": \\"A component with a hyphenated prop name.\\", \\"displayName\\": \\"HyphenatedPropNameComponent\\", \\"props\\": { \\"button-color\\": { \\"defaultValue\\": null, \\"description\\": \\"Button color.\\", \\"name\\": \\"button-color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } } } };
     if (typeof STORYBOOK_REACT_CLASSES !== \\"undefined\\")
-        STORYBOOK_REACT_CLASSES[\\"src/loader/__fixtures__/components/HyphenatedPropName.tsx#HyphenatedPropNameComponent\\"] = { name: \\"HyphenatedPropNameComponent\\" };
+        STORYBOOK_REACT_CLASSES[\\"src/__fixtures__/components/HyphenatedPropName.tsx#HyphenatedPropNameComponent\\"] = { name: \\"HyphenatedPropNameComponent\\" };
 }
 catch (__react_docgen_typescript_loader_error) { }
 
@@ -179,7 +179,7 @@ try {
     exports.MultiPropsComponent.displayName = \\"MultiPropsComponent\\";
     exports.MultiPropsComponent.__docgenInfo = { \\"description\\": \\"This is a component with multiple props.\\", \\"displayName\\": \\"MultiPropsComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": null, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } }, \\"size\\": { \\"defaultValue\\": null, \\"description\\": \\"Button size.\\", \\"name\\": \\"size\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"small\\\\\\" | \\\\\\"large\\\\\\"\\" } } } };
     if (typeof STORYBOOK_REACT_CLASSES !== \\"undefined\\")
-        STORYBOOK_REACT_CLASSES[\\"src/loader/__fixtures__/components/MultiProps.tsx#MultiPropsComponent\\"] = { name: \\"MultiPropsComponent\\" };
+        STORYBOOK_REACT_CLASSES[\\"src/__fixtures__/components/MultiProps.tsx#MultiPropsComponent\\"] = { name: \\"MultiPropsComponent\\" };
 }
 catch (__react_docgen_typescript_loader_error) { }
 
@@ -278,7 +278,7 @@ try {
     exports.MultilineDescriptionComponent.displayName = \\"MultilineDescriptionComponent\\";
     exports.MultilineDescriptionComponent.__docgenInfo = { \\"description\\": \\"A component with a multiline description.\\\\n\\\\nSecond line.\\", \\"displayName\\": \\"MultilineDescriptionComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": null, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } } } };
     if (typeof STORYBOOK_REACT_CLASSES !== \\"undefined\\")
-        STORYBOOK_REACT_CLASSES[\\"src/loader/__fixtures__/components/MultilineDescription.tsx#MultilineDescriptionComponent\\"] = { name: \\"MultilineDescriptionComponent\\" };
+        STORYBOOK_REACT_CLASSES[\\"src/__fixtures__/components/MultilineDescription.tsx#MultilineDescriptionComponent\\"] = { name: \\"MultilineDescriptionComponent\\" };
 }
 catch (__react_docgen_typescript_loader_error) { }
 
@@ -375,7 +375,7 @@ try {
     exports.MultilinePropDescriptionComponent.displayName = \\"MultilinePropDescriptionComponent\\";
     exports.MultilinePropDescriptionComponent.__docgenInfo = { \\"description\\": \\"A component with multiline prop description.\\", \\"displayName\\": \\"MultilinePropDescriptionComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": null, \\"description\\": \\"This is a multiline prop description.\\\\n\\\\nSecond line.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } } } };
     if (typeof STORYBOOK_REACT_CLASSES !== \\"undefined\\")
-        STORYBOOK_REACT_CLASSES[\\"src/loader/__fixtures__/components/MultilinePropDescription.tsx#MultilinePropDescriptionComponent\\"] = { name: \\"MultilinePropDescriptionComponent\\" };
+        STORYBOOK_REACT_CLASSES[\\"src/__fixtures__/components/MultilinePropDescription.tsx#MultilinePropDescriptionComponent\\"] = { name: \\"MultilinePropDescriptionComponent\\" };
 }
 catch (__react_docgen_typescript_loader_error) { }
 
@@ -472,7 +472,7 @@ try {
     exports.SimpleComponent.displayName = \\"SimpleComponent\\";
     exports.SimpleComponent.__docgenInfo = { \\"description\\": \\"A simple component.\\", \\"displayName\\": \\"SimpleComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": null, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } } } };
     if (typeof STORYBOOK_REACT_CLASSES !== \\"undefined\\")
-        STORYBOOK_REACT_CLASSES[\\"src/loader/__fixtures__/components/Simple.tsx#SimpleComponent\\"] = { name: \\"SimpleComponent\\" };
+        STORYBOOK_REACT_CLASSES[\\"src/__fixtures__/components/Simple.tsx#SimpleComponent\\"] = { name: \\"SimpleComponent\\" };
 }
 catch (__react_docgen_typescript_loader_error) { }
 
