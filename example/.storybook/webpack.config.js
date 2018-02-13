@@ -1,6 +1,5 @@
 const path = require("path");
 const genDefaultConfig = require("@storybook/react/dist/server/config/defaults/webpack.config.js");
-const TSDocgenPlugin = require("../../dist");
 
 module.exports = (baseConfig, env) => {
   const config = genDefaultConfig(baseConfig);
@@ -8,10 +7,12 @@ module.exports = (baseConfig, env) => {
   config.module.rules.push({
     test: /\.tsx?$/,
     include: path.resolve(__dirname, "../src"),
-    loader: require.resolve("ts-loader"),
+    // use: [
+    //   require.resolve("ts-loader"),
+    //   require.resolve("react-docgen-typescript-loader"),
+    // ],
+    use: [require.resolve("ts-loader"), path.resolve(__dirname, "../../dist")],
   });
-
-  config.plugins.push(new TSDocgenPlugin());
 
   config.resolve.extensions.push(".ts", ".tsx");
 

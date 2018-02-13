@@ -3,23 +3,23 @@
 exports[`creates error from message 1`] = `
 Object {
   "innerError": undefined,
-  "message": "react-docgen-typescript-webpack-plugin: Error Message",
-  "stack": "Error: react-docgen-typescript-webpack-plugin: Error Message",
+  "message": "react-docgen-typescript-loader: Error Message",
+  "stack": "Error: react-docgen-typescript-loader: Error Message",
 }
 `;
 
 exports[`returns an error when no error object is provided 1`] = `
 Object {
   "innerError": undefined,
-  "message": "react-docgen-typescript-webpack-plugin: An unexpected error has occurred.",
-  "stack": "Error: react-docgen-typescript-webpack-plugin: An unexpected error has occurred.",
+  "message": "react-docgen-typescript-loader: An unexpected error has occurred.",
+  "stack": "Error: react-docgen-typescript-loader: An unexpected error has occurred.",
 }
 `;
 
 exports[`wraps a provided error object 1`] = `
 Object {
   "innerError": "Provided Error",
-  "message": "react-docgen-typescript-webpack-plugin: Provided Error",
-  "stack": "Error: react-docgen-typescript-webpack-plugin: Provided Error",
+  "message": "react-docgen-typescript-loader: Provided Error",
+  "stack": "Error: react-docgen-typescript-loader: Provided Error",
 }
 `;

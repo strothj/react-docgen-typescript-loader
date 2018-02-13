@@ -15,7 +15,7 @@ function createAppError(error?: Error | string): Error {
     : "An unexpected error has occurred.";
 
   const appError: AppError = new Error(
-    `react-docgen-typescript-webpack-plugin: ${errorMessage}`,
+    `react-docgen-typescript-loader: ${errorMessage}`,
   );
 
   appError.innerError = typeof error === "string" ? undefined : error;

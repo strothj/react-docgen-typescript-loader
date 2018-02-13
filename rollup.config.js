@@ -9,7 +9,13 @@ export default {
     format: "cjs",
   },
 
-  external: ["path", "react-docgen-typescript/lib/parser.js", "ajv"],
+  external: [
+    "fs",
+    "path",
+    "typescript",
+    "react-docgen-typescript/lib/parser.js",
+    "ajv",
+  ],
 
   plugins: [typescript(), json()],
 };

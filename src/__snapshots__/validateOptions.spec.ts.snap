@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`skipPropsWithName rejects empty array 1`] = `"react-docgen-typescript-webpack-plugin: .skipPropsWithName should be string, .skipPropsWithName should NOT have less than 1 items, .skipPropsWithName should match some schema in anyOf"`;
+exports[`skipPropsWithName rejects empty array 1`] = `"react-docgen-typescript-loader: .skipPropsWithName should be string, .skipPropsWithName should NOT have less than 1 items, .skipPropsWithName should match some schema in anyOf"`;
 
-exports[`skipPropsWithName rejects empty string 1`] = `"react-docgen-typescript-webpack-plugin: .skipPropsWithName should NOT be shorter than 1 characters, .skipPropsWithName should be array, .skipPropsWithName should match some schema in anyOf"`;
+exports[`skipPropsWithName rejects empty string 1`] = `"react-docgen-typescript-loader: .skipPropsWithName should NOT be shorter than 1 characters, .skipPropsWithName should be array, .skipPropsWithName should match some schema in anyOf"`;
 
-exports[`throws error on unexpected field 1`] = `"react-docgen-typescript-webpack-plugin: should NOT have additional properties"`;
+exports[`throws error on unexpected field 1`] = `"react-docgen-typescript-loader: should NOT have additional properties"`;

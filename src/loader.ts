@@ -13,31 +13,30 @@ import generateDocgenCodeBlock from "./generateDocgenCodeBlock";
 
 const loader: webpack.loader.Loader = function(source) {
   const callback = this.async();
+  try {
+    // Mark the loader as being cacheable since the result should be
+    // deterministic.
+    this.cacheable(true);
 
-  // Mark the loader as being cacheable since the result should be
-  // deterministic.
-  this.cacheable(true);
+    const options: LoaderOptions = this.query || {};
+    validateOptions(options);
+    options.docgenCollectionName =
+      options.docgenCollectionName || "STORYBOOK_REACT_CLASSES";
 
-  const options: LoaderOptions = this.query || {};
-  validateOptions(options);
-  options.docgenCollectionName =
-    options.docgenCollectionName || "STORYBOOK_REACT_CLASSES";
+    // Convert loader's flat options into expected structure for
+    // react-docgen-typescript.
+    // See: node_modules/react-docgen-typescript/lib/parser.d.ts
+    const parserOptions: ParserOptions = {
+      propFilter:
+        options.skipPropsWithName || options.skipPropsWithoutDoc
+          ? {
+              skipPropsWithName: options.skipPropsWithName || undefined,
+              skipPropsWithoutDoc: options.skipPropsWithoutDoc || undefined,
+            }
+          : undefined,
+    };
 
-  // Convert loader's flat options into expected structure for
-  // react-docgen-typescript.
-  // See: node_modules/react-docgen-typescript/lib/parser.d.ts
-  const parserOptions: ParserOptions = {
-    propFilter:
-      options.skipPropsWithName || options.skipPropsWithoutDoc
-        ? {
-            skipPropsWithName: options.skipPropsWithName || undefined,
-            skipPropsWithoutDoc: options.skipPropsWithoutDoc || undefined,
-          }
-        : undefined,
-  };
-
-  const newSource = (() => {
-    try {
+    const newSource = (() => {
       // Configure parser using settings provided to loader.
       // See: node_modules/react-docgen-typescript/lib/parser.d.ts
       let parser: FileParser = withDefaultConfig(parserOptions);
@@ -56,17 +55,22 @@ const loader: webpack.loader.Loader = function(source) {
           options.docgenCollectionName,
         );
       }
-    } catch (e) {
-      throw createAppError(e);
+
+      // Return unchanged source code if no docgen information was available.
+      return source;
+    })();
+
+    if (!callback) return newSource;
+    callback(null, newSource);
+    return;
+  } catch (e) {
+    const wrappedError = createAppError(e);
+    if (callback) {
+      callback(wrappedError);
+      return;
     }
-
-    // Return unchanged source code if no docgen information was available.
-    return source;
-  })();
-
-  if (!callback) return newSource;
-  callback(null, newSource);
-  return;
+    throw wrappedError;
+  }
 };
 
 export default loader;

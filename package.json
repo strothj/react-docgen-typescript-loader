@@ -1,18 +1,18 @@
 {
-  "name": "react-docgen-typescript-webpack-plugin",
-  "version": "1.0.2",
-  "description": "Webpack plugin to generate docgen information from Typescript React components.",
+  "name": "react-docgen-typescript-loader",
+  "version": "1.0.0",
+  "description": "Webpack loader to generate docgen information from TypeScript React components.",
   "keywords": [
     "storybook",
     "react",
     "docgen",
     "typescript",
     "webpack",
-    "plugin"
+    "loader"
   ],
-  "homepage": "https://github.com/strothj/react-docgen-typescript-webpack-plugin",
-  "bugs": "https://github.com/strothj/react-docgen-typescript-webpack-plugin/issues",
-  "repository": "https://github.com/strothj/react-docgen-typescript-webpack-plugin.git",
+  "homepage": "https://github.com/strothj/react-docgen-typescript-loader",
+  "bugs": "https://github.com/strothj/react-docgen-typescript-loader/issues",
+  "repository": "https://github.com/strothj/react-docgen-typescript-loader.git",
   "author": "strothj (https://github.com/strothj)",
   "main": "dist/index.js",
   "license": "MIT",
@@ -61,5 +61,8 @@
   "dependencies": {
     "ajv": "^6.1.1",
     "react-docgen-typescript": "^1.2.3"
+  },
+  "peerDependencies": {
+    "typescript": "*"
   }
 }
