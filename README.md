@@ -16,6 +16,10 @@ or
 $ yarn add --dev react-docgen-typescript-loader
 ```
 
+### Performance
+
+There is quite a significant startup cost due to the initial type parsing. Once the project is running in watch mode then things should be smoother due to Webpack caching. You will probably want to exclude this loader in your production Webpack config to speed up building.
+
 ### Add the plugin to your Webpack configuration.
 
 **IMPORTANT:** Webpack loaders are executed right-to-left (or bottom-to-top). `react-docgen-typescript-loader` needs to be added under `ts-loader`.
