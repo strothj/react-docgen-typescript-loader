@@ -6,6 +6,7 @@ import hyphenatedPropNameComponentDoc from "./__fixtures__/component-docs/hyphen
 import multilineDescriptionComponentDoc from "./__fixtures__/component-docs/multilineDescription";
 import multilinePropDescriptionComponentDoc from "./__fixtures__/component-docs/multilinePropDescription";
 import multilinePropDescription2ComponentDoc from "./__fixtures__/component-docs/multilinePropDescription2";
+import defaultValuePropComponentDoc from "./__fixtures__/component-docs/defaultProp";
 import generateDocgenCodeBlock from "./generateDocgenCodeBlock";
 
 it("renders normal single prop", () => {
@@ -40,6 +41,11 @@ it("escapes multiline prop description", () => {
   expect(sandbox).toMatchSnapshot();
 
   sandbox = executeGeneratedCode(multilinePropDescription2ComponentDoc);
+  expect(sandbox).toMatchSnapshot();
+});
+
+it("renders default value", () => {
+  const sandbox = executeGeneratedCode(defaultValuePropComponentDoc);
   expect(sandbox).toMatchSnapshot();
 });
 

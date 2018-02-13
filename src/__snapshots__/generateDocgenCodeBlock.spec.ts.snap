@@ -82,6 +82,34 @@ Second line",
 }
 `;
 
+exports[`renders default value 1`] = `
+Object {
+  "STORYBOOK_REACT_CLASSES": Object {
+    "Component.tsx#Component": Object {
+      "docgenInfo": Object {
+        "description": "A component.",
+        "displayName": "Component",
+        "props": Object {
+          "someProp": Object {
+            "defaultValue": Object {
+              "value": "some value",
+            },
+            "description": "Prop description",
+            "name": "someProp",
+            "required": true,
+            "type": Object {
+              "name": "string",
+            },
+          },
+        },
+      },
+      "name": "Component",
+      "path": "Component.tsx",
+    },
+  },
+}
+`;
+
 exports[`renders multiple props 1`] = `
 Object {
   "STORYBOOK_REACT_CLASSES": Object {

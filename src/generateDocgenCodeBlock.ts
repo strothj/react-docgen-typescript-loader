@@ -23,7 +23,16 @@ try {
         .map(
           ([propName, prop]) =>
             `"${escapeString(propName)}": {
-          defaultValue: null,
+          defaultValue: ${
+            prop.defaultValue != null &&
+            typeof prop.defaultValue === "object" &&
+            "value" in prop.defaultValue &&
+            typeof prop.defaultValue.value === "string"
+              ? ` {
+                    value: "${escapeString(prop.defaultValue.value)}"
+                  }`
+              : null
+          },
           description: "${escapeString(prop.description)}",
           name: "${prop.name}",
           required: ${prop.required ? "true" : "false"},

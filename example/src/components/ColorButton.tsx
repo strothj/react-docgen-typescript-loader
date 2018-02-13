@@ -1,8 +1,12 @@
 import * as React from "react";
 
 interface ColorButtonProps {
-  /** Buttons background color */
-  color: "blue" | "green";
+  /**
+   * Buttons background color
+   *
+   * @default green
+   **/
+  color?: "blue" | "green";
 }
 
 /** A button with a configurable background color. */
