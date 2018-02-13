@@ -6,6 +6,10 @@ Webpack loader to generate docgen information from TypeScript React components. 
 
 ## Installation
 
+### Requirements
+
+Requires TypeScript 2.3 or above.
+
 ### Add the package as a development dependency.
 
 ```shell
