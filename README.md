@@ -83,7 +83,7 @@ generated for components who are only exported as default. You can work around
 the issue by exporting the component using a named export.
 
 **CURRENT LIMITATION**
-The current implementation seems to have trouble with the compiler option `module` being set to `esnext`.
+The current implementation seems to have trouble with the compiler option `module` being set to `esnext`. I have an in development version that works through a Webpack parser instead of a plugin. It may work better if needing support for that module setting: https://github.com/strothj/react-docgen-typescript-webpack-plugin/tree/feature/add-loader
 
 ```javascript
 import * as React from "react";
