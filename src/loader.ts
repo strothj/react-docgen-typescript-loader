@@ -51,6 +51,7 @@ const loader: webpack.loader.Loader = function(source) {
       if (componentDocs.length) {
         return generateDocgenCodeBlock(
           this.resourcePath,
+          source as string,
           componentDocs,
           options.docgenCollectionName,
         );

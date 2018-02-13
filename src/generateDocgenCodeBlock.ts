@@ -1,16 +1,16 @@
-import * as fs from "fs";
 import * as path from "path";
 import * as ts from "typescript";
 import { ComponentDoc, PropItem } from "react-docgen-typescript/lib/parser.js";
 
 export default function(
   filename: string,
+  source: string,
   componentDocs: ComponentDoc[],
   docgenCollectionName?: string | null,
 ): string {
   const sourceFile = ts.createSourceFile(
     filename,
-    fs.readFileSync(filename, "utf8"),
+    source,
     ts.ScriptTarget.ESNext,
   );
 
@@ -160,7 +160,12 @@ function createPropDefinition(propName: string, prop: PropItem) {
   const setDefaultValue = (defaultValue: { value: string } | null) =>
     ts.createPropertyAssignment(
       ts.createLiteral("defaultValue"),
-      prop.defaultValue
+      // Use a more extensive check on defaultValue. Sometimes the parser
+      // returns an empty object.
+      defaultValue != null &&
+      typeof defaultValue === "object" &&
+      "value" in defaultValue &&
+      typeof defaultValue.value === "string"
         ? ts.createObjectLiteral([
             ts.createPropertyAssignment(
               ts.createIdentifier("value"),
