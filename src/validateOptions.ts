@@ -33,6 +33,20 @@ const validate = ajv.compile({
     setDisplayName: {
       type: "boolean",
     },
+
+    includes: {
+      type: "array",
+      items: {
+        type: "string",
+      },
+    },
+
+    excludes: {
+      type: "array",
+      items: {
+        type: "string",
+      },
+    },
   },
 });
 

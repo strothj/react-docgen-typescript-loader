@@ -39,14 +39,20 @@ function processResource(
   // deterministic.
   this.cacheable(true);
 
-  // Should this be here?
-  // if (!/\.tsx?$/.test(this.resourcePath)) return source;
-
   const options: LoaderOptions = this.query || {};
   validateOptions(options);
   options.docgenCollectionName =
     options.docgenCollectionName || "STORYBOOK_REACT_CLASSES";
   options.setDisplayName = options.setDisplayName || true;
+
+  // Check resource against whitelists and blacklists.
+  const includes = options.includes || ["\\.tsx$"];
+  const excludes = options.excludes || ["node_modules"];
+  let shouldProcess = includes.some(i => new RegExp(i).test(this.resourcePath));
+  shouldProcess = shouldProcess
+    ? !excludes.some(i => new RegExp(i).test(this.resourcePath))
+    : false;
+  if (!shouldProcess) return source;
 
   // Convert the loader's flat options into the expected structure for
   // react-docgen-typescript.
