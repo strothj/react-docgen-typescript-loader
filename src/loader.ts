@@ -7,7 +7,6 @@ import {
   FileParser,
 } from "react-docgen-typescript/lib/parser.js";
 import LoaderOptions from "./LoaderOptions";
-import createAppError from "./createAppError";
 import validateOptions from "./validateOptions";
 import generateDocgenCodeBlock from "./generateDocgenCodeBlock";
 
@@ -65,12 +64,11 @@ const loader: webpack.loader.Loader = function(source) {
     callback(null, newSource);
     return;
   } catch (e) {
-    const wrappedError = createAppError(e);
     if (callback) {
-      callback(wrappedError);
+      callback(e);
       return;
     }
-    throw wrappedError;
+    throw e;
   }
 };
 

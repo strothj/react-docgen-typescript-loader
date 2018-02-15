@@ -1,6 +1,5 @@
 import * as Ajv from "ajv";
 import LoaderOptions from "./LoaderOptions";
-import createAppError from "./createAppError";
 
 const ajv = new Ajv();
 const validate = ajv.compile({
@@ -45,7 +44,7 @@ function validateOptions(options?: LoaderOptions) {
         return message;
       })
       .join(", ");
-    throw createAppError(errorMessage);
+    throw new Error(errorMessage);
   }
 }
 
