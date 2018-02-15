@@ -1,4 +1,4 @@
-import * as Ajv from "ajv";
+import Ajv from "ajv";
 import LoaderOptions from "./LoaderOptions";
 
 const ajv = new Ajv();

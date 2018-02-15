@@ -1,6 +1,6 @@
-import * as fs from "fs";
-import * as path from "path";
-import * as webpack from "webpack";
+import fs from "fs";
+import path from "path";
+import webpack from "webpack";
 import MemoryFS = require("memory-fs");
 
 describe("all component fixtures compile successfully", () => {

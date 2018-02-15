@@ -72,8 +72,15 @@ exports[`all component fixtures compile successfully fixture: DefaultPropValue.t
 
 \\"use strict\\";
 
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result[\\"default\\"] = mod;
+    return result;
+}
 Object.defineProperty(exports, \\"__esModule\\", { value: true });
-var React = __webpack_require__(1);
+var React = __importStar(__webpack_require__(1));
 /**
  * Component with a prop with a default value.
  */
@@ -173,8 +180,15 @@ exports[`all component fixtures compile successfully fixture: HyphenatedPropName
 
 \\"use strict\\";
 
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result[\\"default\\"] = mod;
+    return result;
+}
 Object.defineProperty(exports, \\"__esModule\\", { value: true });
-var React = __webpack_require__(1);
+var React = __importStar(__webpack_require__(1));
 /**
  * A component with a hyphenated prop name.
  */
@@ -274,8 +288,15 @@ exports[`all component fixtures compile successfully fixture: MultiProps.tsx 1`]
 
 \\"use strict\\";
 
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result[\\"default\\"] = mod;
+    return result;
+}
 Object.defineProperty(exports, \\"__esModule\\", { value: true });
-var React = __webpack_require__(1);
+var React = __importStar(__webpack_require__(1));
 /**
  * This is a component with multiple props.
  */
@@ -375,8 +396,15 @@ exports[`all component fixtures compile successfully fixture: MultilineDescripti
 
 \\"use strict\\";
 
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result[\\"default\\"] = mod;
+    return result;
+}
 Object.defineProperty(exports, \\"__esModule\\", { value: true });
-var React = __webpack_require__(1);
+var React = __importStar(__webpack_require__(1));
 /**
  * A component with a multiline description.
  *
@@ -478,8 +506,15 @@ exports[`all component fixtures compile successfully fixture: MultilinePropDescr
 
 \\"use strict\\";
 
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result[\\"default\\"] = mod;
+    return result;
+}
 Object.defineProperty(exports, \\"__esModule\\", { value: true });
-var React = __webpack_require__(1);
+var React = __importStar(__webpack_require__(1));
 /**
  * A component with multiline prop description.
  */
@@ -579,8 +614,15 @@ exports[`all component fixtures compile successfully fixture: Simple.tsx 1`] = `
 
 \\"use strict\\";
 
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result[\\"default\\"] = mod;
+    return result;
+}
 Object.defineProperty(exports, \\"__esModule\\", { value: true });
-var React = __webpack_require__(1);
+var React = __importStar(__webpack_require__(1));
 /**
  * A simple component.
  */
