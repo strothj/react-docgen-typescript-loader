@@ -2,20 +2,24 @@ import * as path from "path";
 import * as ts from "typescript";
 import { ComponentDoc, PropItem } from "react-docgen-typescript/lib/parser.js";
 
-export default function(
-  filename: string,
-  source: string,
-  componentDocs: ComponentDoc[],
-  docgenCollectionName?: string | null,
+export interface GeneratorOptions {
+  filename: string;
+  source: string;
+  componentDocs: ComponentDoc[];
+  docgenCollectionName: string | null;
+}
+
+export default function generateDocgenCodeBlock(
+  options: GeneratorOptions,
 ): string {
   const sourceFile = ts.createSourceFile(
-    filename,
-    source,
+    options.filename,
+    options.source,
     ts.ScriptTarget.ESNext,
   );
 
   const relativeFilename = path
-    .relative("./", path.resolve("./", filename))
+    .relative("./", path.resolve("./", options.filename))
     .replace(/\\/g, "/");
 
   const wrapInTryStatement = (statements: ts.Statement[]): ts.TryStatement =>
@@ -30,14 +34,14 @@ export default function(
       undefined,
     );
 
-  const codeBlocks = componentDocs.map(d =>
+  const codeBlocks = options.componentDocs.map(d =>
     wrapInTryStatement([
       setDisplayName(d),
       setComponentDocGen(d),
-      docgenCollectionName != null
+      options.docgenCollectionName != null
         ? insertDocgenIntoGlobalCollection(
             d,
-            docgenCollectionName,
+            options.docgenCollectionName,
             relativeFilename,
           )
         : null,
