@@ -24,7 +24,14 @@ $ yarn add --dev react-docgen-typescript-loader
 
 There is quite a significant startup cost due to the initial type parsing. Once the project is running in watch mode then things should be smoother due to Webpack caching. You will probably want to exclude this loader in your production Webpack config to speed up building.
 
-### Add the plugin to your Webpack configuration.
+### Alternative Implementation
+
+This plugin uses a Webpack loader to inject the docgen information. There is also a version which works as a Webpack plugin. I will be supporting both versions. The loader version more accurately generates the injected code blocks and should work with all module types but at the cost of a longer initial startup. The plugin version may be faster.
+
+The Webpack plugin version is available here:
+https://github.com/strothj/react-docgen-typescript-loader/tree/plugin
+
+### Add the loader to your Webpack configuration.
 
 **IMPORTANT:** Webpack loaders are executed right-to-left (or bottom-to-top). `react-docgen-typescript-loader` needs to be added under `ts-loader`.
 
@@ -54,27 +61,33 @@ module.exports = (baseConfig, env) => {
 
 ## Optional Loader Options
 
-| Option               | Type                         | Description                                                                                                                                                                                                                                                                 |
-| -------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| skipPropsWithName    | `string[] | string`          | Avoid including docgen information for the prop or props specified.                                                                                                                                                                                                         |
-| skipPropsWithoutDoc  | `boolean`                    | Avoid including docgen information for props without documentation.                                                                                                                                                                                                         |
-| tsconfigPath         | `string`                     | Specify the location of the tsconfig.json to use. Can not be used with compilerOptions.                                                                                                                                                                                     |
-| compilerOptions      | `typescript.CompilerOptions` | Specify TypeScript compiler options. Can not be used with tsconfigPath.                                                                                                                                                                                                     |
-| docgenCollectionName | `string | null`              | Specify the docgen collection name to use. All docgen information will be collected into this global object. Set to `null` to disable. Defaults to `STORYBOOK_REACT_CLASSES` for use with the Storybook Info Addon. https://github.com/gongreg/react-storybook-addon-docgen |
+| Option               | Type                       | Description                                                                                                                                                                                                                                                                 |
+| -------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| skipPropsWithName    | string[] or string         | Avoid including docgen information for the prop or props specified.                                                                                                                                                                                                         |
+| skipPropsWithoutDoc  | boolean                    | Avoid including docgen information for props without documentation.                                                                                                                                                                                                         |
+| tsconfigPath         | string                     | Specify the location of the tsconfig.json to use. Can not be used with compilerOptions.                                                                                                                                                                                     |
+| compilerOptions      | typescript.CompilerOptions | Specify TypeScript compiler options. Can not be used with tsconfigPath.                                                                                                                                                                                                     |
+| docgenCollectionName | string or null             | Specify the docgen collection name to use. All docgen information will be collected into this global object. Set to `null` to disable. Defaults to `STORYBOOK_REACT_CLASSES` for use with the Storybook Info Addon. https://github.com/gongreg/react-storybook-addon-docgen |
+| setDisplayName       | boolean                    | Automatically set the component's display name. If you want to set display names yourself or are using another plugin to do this, you should disable this option. Defaults to true.                                                                                         |
 
 ## Usage
 
 ### Storybook Info Addon
 
 Include the `withInfo` decorator as normal.
+Reference the addon documentation for the latest usage instructions:
+https://github.com/storybooks/storybook/tree/master/addons/info
 
 **Special Note:**
 
-The Storybook Info Addon will only attempt to read Docgen information when the
-story name matches the name of the component. So if you have a component named
-`ColorButton`, then you will have to use something like:
+The Storybook Info Addon is able to populate the story description from your component's documentation. It does this when your story name matches the display name of your component. The prop tables will include component descriptions for components which were not used as the main story description.
 
-`storiesOf("...", module).add("ColorButton", ...)`
+So if you have a component named
+`ColorButton`, then you will have to use something like: `storiesOf("...", module).add("ColorButton", ...)` to have the story description come from the component description.
+
+In addition to the description from the component, you may still include story description text using the normal withInfo api.
+
+**It is important** to export your component using a named export for docgen information to be generated properly.
 
 ---
 

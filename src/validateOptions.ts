@@ -29,6 +29,10 @@ const validate = ajv.compile({
     docgenCollectionName: {
       anyOf: [{ type: "string", minLength: 1 }, { type: "null" }],
     },
+
+    setDisplayName: {
+      type: "boolean",
+    },
   },
 });
 

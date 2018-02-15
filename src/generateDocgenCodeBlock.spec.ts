@@ -40,6 +40,7 @@ function loadFixtureTests(): GeneratorOptions[] {
         source: fs.readFileSync(filePath, "utf8"),
         componentDocs: parse(filePath),
         docgenCollectionName: null,
+        setDisplayName: true,
       } as GeneratorOptions;
     });
 }

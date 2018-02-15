@@ -7,6 +7,7 @@ export interface GeneratorOptions {
   source: string;
   componentDocs: ComponentDoc[];
   docgenCollectionName: string | null;
+  setDisplayName: boolean;
 }
 
 export default function generateDocgenCodeBlock(
@@ -36,7 +37,7 @@ export default function generateDocgenCodeBlock(
 
   const codeBlocks = options.componentDocs.map(d =>
     wrapInTryStatement([
-      setDisplayName(d),
+      options.setDisplayName ? setDisplayName(d) : null,
       setComponentDocGen(d),
       options.docgenCollectionName != null
         ? insertDocgenIntoGlobalCollection(

@@ -20,9 +20,25 @@ export default interface LoaderOptions {
    * Specify the docgen collection name to use. All docgen information will
    * be collected into this global object. Set to null to disable.
    *
-   * Defaults to STORYBOOK_REACT_CLASSES.
-   *
+   * @default STORYBOOK_REACT_CLASSES
    * @see https://github.com/gongreg/react-storybook-addon-docgen
    **/
   docgenCollectionName?: string | null;
+
+  /**
+   * Automatically set the component's display name. If you want to set display
+   * names yourself or are using another plugin to do this, you should disable
+   * this option.
+   *
+   * ```
+   * class MyComponent extends React.Component {
+   * ...
+   * }
+   *
+   * MyComponent.displayName = "MyComponent";
+   * ```
+   *
+   * @default true
+   */
+  setDisplayName?: boolean;
 };

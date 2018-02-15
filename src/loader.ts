@@ -39,10 +39,14 @@ function processResource(
   // deterministic.
   this.cacheable(true);
 
+  // Should this be here?
+  // if (!/\.tsx?$/.test(this.resourcePath)) return source;
+
   const options: LoaderOptions = this.query || {};
   validateOptions(options);
   options.docgenCollectionName =
     options.docgenCollectionName || "STORYBOOK_REACT_CLASSES";
+  options.setDisplayName = options.setDisplayName || true;
 
   // Convert the loader's flat options into the expected structure for
   // react-docgen-typescript.
@@ -74,6 +78,7 @@ function processResource(
       source,
       componentDocs,
       docgenCollectionName: options.docgenCollectionName,
+      setDisplayName: options.setDisplayName,
     });
   }
 
