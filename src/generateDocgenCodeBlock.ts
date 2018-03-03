@@ -56,7 +56,11 @@ export default function generateDocgenCodeBlock(
   // Concat original source code with code from generated code blocks.
   const result = codeBlocks.reduce(
     (acc, node) => acc + printNode(node),
-    printNode(sourceFile),
+
+    // Use original source text rather than using printNode on the parsed form
+    // to prevent issue where literals are stripped within components.
+    // Ref: https://github.com/strothj/react-docgen-typescript-loader/issues/7
+    options.source,
   );
 
   return result;

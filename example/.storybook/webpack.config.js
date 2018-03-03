@@ -12,6 +12,7 @@ module.exports = (baseConfig, env) => {
     //   require.resolve("react-docgen-typescript-loader"),
     // ],
     use: [require.resolve("ts-loader"), path.resolve(__dirname, "../../dist")],
+    // use: [require.resolve("ts-loader")],
   });
 
   config.resolve.extensions.push(".ts", ".tsx");

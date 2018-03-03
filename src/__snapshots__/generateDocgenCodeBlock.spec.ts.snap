@@ -2,14 +2,18 @@
 
 exports[`adds component to docgen collection 1`] = `
 "import * as React from \\"react\\";
+
 interface SimpleComponentProps {
-    /** Button color. */
-    color: \\"blue\\" | \\"green\\";
+  /** Button color. */
+  color: \\"blue\\" | \\"green\\";
 }
+
 /**
  * A simple component.
  */
-export const SimpleComponent: React.SFC<SimpleComponentProps> = props => (<button style={{ backgroundColor: props.color }}>{props.children}</button>);
+export const SimpleComponent: React.SFC<SimpleComponentProps> = props => (
+  <button style={{ backgroundColor: props.color }}>{props.children}</button>
+);
 try {
     // @ts-ignore
     SimpleComponent.displayName = \\"SimpleComponent\\";
@@ -25,18 +29,24 @@ catch (__react_docgen_typescript_loader_error) { }"
 
 exports[`component fixture DefaultPropValue.tsx has code block generated 1`] = `
 "import * as React from \\"react\\";
+
 interface DefaultPropValueComponentProps {
-    /**
-     * Button color.
-     *
-     * @default blue
-     **/
-    color: \\"blue\\" | \\"green\\";
+  /**
+   * Button color.
+   *
+   * @default blue
+   **/
+  color: \\"blue\\" | \\"green\\";
 }
+
 /**
  * Component with a prop with a default value.
  */
-export const DefaultPropValueComponent: React.SFC<DefaultPropValueComponentProps> = props => (<button style={{ backgroundColor: props.color }}>{props.children}</button>);
+export const DefaultPropValueComponent: React.SFC<
+  DefaultPropValueComponentProps
+> = props => (
+  <button style={{ backgroundColor: props.color }}>{props.children}</button>
+);
 try {
     // @ts-ignore
     DefaultPropValueComponent.displayName = \\"DefaultPropValueComponent\\";
@@ -48,14 +58,22 @@ catch (__react_docgen_typescript_loader_error) { }"
 
 exports[`component fixture HyphenatedPropName.tsx has code block generated 1`] = `
 "import * as React from \\"react\\";
+
 interface HyphenatedPropNameProps {
-    /** Button color. */
-    \\"button-color\\": \\"blue\\" | \\"green\\";
+  /** Button color. */
+  \\"button-color\\": \\"blue\\" | \\"green\\";
 }
+
 /**
  * A component with a hyphenated prop name.
  */
-export const HyphenatedPropNameComponent: React.SFC<HyphenatedPropNameProps> = props => (<button style={{ backgroundColor: props[\\"button-color\\"] }}>{props.children}</button>);
+export const HyphenatedPropNameComponent: React.SFC<
+  HyphenatedPropNameProps
+> = props => (
+  <button style={{ backgroundColor: props[\\"button-color\\"] }}>
+    {props.children}
+  </button>
+);
 try {
     // @ts-ignore
     HyphenatedPropNameComponent.displayName = \\"HyphenatedPropNameComponent\\";
@@ -67,16 +85,23 @@ catch (__react_docgen_typescript_loader_error) { }"
 
 exports[`component fixture MultiProps.tsx has code block generated 1`] = `
 "import * as React from \\"react\\";
+
 interface MultiPropsComponentProps {
-    /** Button color. */
-    color: \\"blue\\" | \\"green\\";
-    /** Button size. */
-    size: \\"small\\" | \\"large\\";
+  /** Button color. */
+  color: \\"blue\\" | \\"green\\";
+
+  /** Button size. */
+  size: \\"small\\" | \\"large\\";
 }
+
 /**
  * This is a component with multiple props.
  */
-export const MultiPropsComponent: React.SFC<MultiPropsComponentProps> = props => (<button style={{ backgroundColor: props.color }}>{props.children}</button>);
+export const MultiPropsComponent: React.SFC<
+  MultiPropsComponentProps
+> = props => (
+  <button style={{ backgroundColor: props.color }}>{props.children}</button>
+);
 try {
     // @ts-ignore
     MultiPropsComponent.displayName = \\"MultiPropsComponent\\";
@@ -88,16 +113,22 @@ catch (__react_docgen_typescript_loader_error) { }"
 
 exports[`component fixture MultilineDescription.tsx has code block generated 1`] = `
 "import * as React from \\"react\\";
+
 interface MultilineDescriptionProps {
-    /** Button color. */
-    color: \\"blue\\" | \\"green\\";
+  /** Button color. */
+  color: \\"blue\\" | \\"green\\";
 }
+
 /**
  * A component with a multiline description.
  *
  * Second line.
  */
-export const MultilineDescriptionComponent: React.SFC<MultilineDescriptionProps> = props => (<button style={{ backgroundColor: props.color }}>{props.children}</button>);
+export const MultilineDescriptionComponent: React.SFC<
+  MultilineDescriptionProps
+> = props => (
+  <button style={{ backgroundColor: props.color }}>{props.children}</button>
+);
 try {
     // @ts-ignore
     MultilineDescriptionComponent.displayName = \\"MultilineDescriptionComponent\\";
@@ -109,18 +140,24 @@ catch (__react_docgen_typescript_loader_error) { }"
 
 exports[`component fixture MultilinePropDescription.tsx has code block generated 1`] = `
 "import * as React from \\"react\\";
+
 interface MultilinePropDescriptionComponentProps {
-    /**
-     * This is a multiline prop description.
-     *
-     * Second line.
-     */
-    color: \\"blue\\" | \\"green\\";
+  /**
+   * This is a multiline prop description.
+   *
+   * Second line.
+   */
+  color: \\"blue\\" | \\"green\\";
 }
+
 /**
  * A component with multiline prop description.
  */
-export const MultilinePropDescriptionComponent: React.SFC<MultilinePropDescriptionComponentProps> = props => (<button style={{ backgroundColor: props.color }}>{props.children}</button>);
+export const MultilinePropDescriptionComponent: React.SFC<
+  MultilinePropDescriptionComponentProps
+> = props => (
+  <button style={{ backgroundColor: props.color }}>{props.children}</button>
+);
 try {
     // @ts-ignore
     MultilinePropDescriptionComponent.displayName = \\"MultilinePropDescriptionComponent\\";
@@ -132,19 +169,43 @@ catch (__react_docgen_typescript_loader_error) { }"
 
 exports[`component fixture Simple.tsx has code block generated 1`] = `
 "import * as React from \\"react\\";
+
 interface SimpleComponentProps {
-    /** Button color. */
-    color: \\"blue\\" | \\"green\\";
+  /** Button color. */
+  color: \\"blue\\" | \\"green\\";
 }
+
 /**
  * A simple component.
  */
-export const SimpleComponent: React.SFC<SimpleComponentProps> = props => (<button style={{ backgroundColor: props.color }}>{props.children}</button>);
+export const SimpleComponent: React.SFC<SimpleComponentProps> = props => (
+  <button style={{ backgroundColor: props.color }}>{props.children}</button>
+);
 try {
     // @ts-ignore
     SimpleComponent.displayName = \\"SimpleComponent\\";
     // @ts-ignore
     SimpleComponent.__docgenInfo = { \\"description\\": \\"A simple component.\\", \\"displayName\\": \\"SimpleComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": null, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } } } };
+}
+catch (__react_docgen_typescript_loader_error) { }"
+`;
+
+exports[`component fixture TextOnlyComponent.tsx has code block generated 1`] = `
+"import * as React from \\"react\\";
+
+/**
+ * A component with only text content wrapped in a div.
+ *
+ * Ref: https://github.com/strothj/react-docgen-typescript-loader/issues/7
+ */
+export const SimpleComponent: React.SFC<{}> = () => (
+  <div>Test only component</div>
+);
+try {
+    // @ts-ignore
+    SimpleComponent.displayName = \\"SimpleComponent\\";
+    // @ts-ignore
+    SimpleComponent.__docgenInfo = { \\"description\\": \\"A component with only text content wrapped in a div.\\\\n\\\\nRef: https://github.com/strothj/react-docgen-typescript-loader/issues/7\\", \\"displayName\\": \\"SimpleComponent\\", \\"props\\": {} };
 }
 catch (__react_docgen_typescript_loader_error) { }"
 `;
