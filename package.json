@@ -31,7 +31,7 @@
     "clean": "rimraf dist",
     "lint": "tslint -p ./",
     "prepublishOnly": "npm-run-all lint test clean build",
-    "start": "tsc -w",
+    "start": "tsc -p tsconfig.publish.json -w",
     "test": "jest"
   },
   "devDependencies": {
