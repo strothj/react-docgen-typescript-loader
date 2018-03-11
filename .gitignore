@@ -3,3 +3,5 @@ node_modules/
 .rpt2_cache/
 dist/
 *error.log
+lerna-debug.log
+storybook-static/

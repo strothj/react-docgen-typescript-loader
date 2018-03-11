@@ -7,12 +7,10 @@ module.exports = (baseConfig, env) => {
   config.module.rules.push({
     test: /\.tsx?$/,
     include: path.resolve(__dirname, "../src"),
-    // use: [
-    //   require.resolve("ts-loader"),
-    //   require.resolve("react-docgen-typescript-loader"),
-    // ],
-    use: [require.resolve("ts-loader"), path.resolve(__dirname, "../../dist")],
-    // use: [require.resolve("ts-loader")],
+    use: [
+      require.resolve("ts-loader"),
+      require.resolve("react-docgen-typescript-loader"),
+    ],
   });
 
   config.resolve.extensions.push(".ts", ".tsx");

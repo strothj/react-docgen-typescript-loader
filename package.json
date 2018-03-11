@@ -1,19 +1,23 @@
 {
   "private": true,
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
+  "workspaces": ["packages/*"],
   "engines": {
     "node": ">= 8.9",
-    "yarn": ">= 1.3.2"
+    "yarn": ">= 1.5.1"
   },
   "precommit": [
-    "lint"
+    "lint",
+    "test",
+    "clean",
+    "build"
   ],
   "scripts": {
-    "lint": "tslint -p ./"
+    "build": "lerna run build",
+    "clean": "lerna run clean",
+    "test": "lerna run test",
+    "lint": "tslint -p ./",
+    "storybook": "lerna run --parallel storybook",
+    "build-storybook": "lerna run --parallel build-storybook"
   },
   "devDependencies": {
     "@types/jest": "^22.2.0",
@@ -21,6 +25,7 @@
     "@types/node": "^9.4.7",
     "@types/react": "^16.0.40",
     "@types/webpack": "^4.1.0",
+    "lerna": "^2.9.0",
     "pre-commit": "^1.2.2",
     "prettier": "^1.11.1",
     "tslint": "^5.9.1",
