@@ -1,0 +1,46 @@
+{
+  "name": "react-docgen-typescript-loader",
+  "version": "2.0.2",
+  "description": "Webpack loader to generate docgen information from TypeScript React components.",
+  "keywords": [
+    "storybook",
+    "react",
+    "docgen",
+    "typescript",
+    "webpack",
+    "loader"
+  ],
+  "homepage": "https://github.com/strothj/react-docgen-typescript-loader",
+  "bugs": "https://github.com/strothj/react-docgen-typescript-loader/issues",
+  "repository": "https://github.com/strothj/react-docgen-typescript-loader.git",
+  "author": "strothj (https://github.com/strothj)",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "tsc -p ./",
+    "clean": "rimraf dist",
+    "start": "tsc -p ./ -w",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^22.2.1",
+    "memory-fs": "^0.4.1",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^22.0.3",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.7.2",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "ajv": "^6.1.1",
+    "react-docgen-typescript": "^1.2.3"
+  },
+  "peerDependencies": {
+    "typescript": "*"
+  }
+}

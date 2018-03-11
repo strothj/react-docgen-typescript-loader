@@ -55,8 +55,8 @@ function validateOptions(options?: LoaderOptions) {
   const valid = validate(options);
 
   if (!valid) {
-    const errorMessage = validate.errors!
-      .map(e => {
+    const errorMessage = validate
+      .errors!.map(e => {
         let message: string = e.message!;
         if (e.dataPath) message = `${e.dataPath} ${message}`;
         return message;

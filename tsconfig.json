@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
+    "rootDir": "./",
     "target": "es5",
     "module": "commonjs",
     "lib": ["esnext"],
@@ -15,6 +15,5 @@
       { "name": "tslint-language-service" },
       { "name": "typescript-snapshots-plugin" }
     ]
-  },
-  "exclude": ["node_modules", "example", "dist"]
+  }
 }
