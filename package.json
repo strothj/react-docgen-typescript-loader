@@ -14,7 +14,7 @@
   "scripts": {
     "build": "lerna run build",
     "clean": "lerna run clean",
-    "test": "lerna run test",
+    "test": "lerna run --stream --concurrency 1 test",
     "lint": "tslint -p ./",
     "storybook": "lerna run --parallel storybook",
     "build-storybook": "lerna run --parallel build-storybook"
