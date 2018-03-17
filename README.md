@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./logo.png">
+  <img src="./logo.png" alt="Logo for project react-docgen-typescript-loader">
 </p>
 
 <p align="center">
@@ -9,11 +9,16 @@ Webpack loader to generate docgen information from TypeScript React components. 
 
 <p align="center">
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NNRJYNNY5YTJ2">
-    <img src="https://img.shields.io/badge/Donate-PayPal-green.png">
+    <img src="https://img.shields.io/badge/Donate-PayPal-green.png" alt="PayPal donation button">
   </a>
 </p>
 
-![Example Image](/example.png?raw=true)
+
+<p align="center">
+  <img src="./example.png" alt="Example screenshot of Storybook with TypeScript props">
+  <br>
+  <a href="./packages/react-docgen-typescript-loader-example">Example Storybook project</a>
+</p>
 
 ## Installation
 
