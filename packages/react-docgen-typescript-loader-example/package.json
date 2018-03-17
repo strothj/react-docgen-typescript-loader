@@ -14,6 +14,7 @@
     "@storybook/addon-links": "^3.3.15",
     "@storybook/addons": "^3.3.15",
     "@storybook/react": "^3.3.15",
+    "@types/storybook__addon-actions": "^3.0.3",
     "@types/storybook__addon-info": "^3.2.1",
     "@types/storybook__react": "^3.0.6",
     "babel-core": "^6.26.0",

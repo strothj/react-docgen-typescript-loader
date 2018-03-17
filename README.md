@@ -1,6 +1,17 @@
-# react-docgen-typescript-loader
+<p align="center">
+  <img src="./logo.png">
+</p>
 
-Webpack loader to generate docgen information from TypeScript React components. The primary use case is to get the prop types table populated in the [Storybook Info Addon](https://github.com/storybooks/storybook/tree/master/addons/info).
+<p align="center">
+Webpack loader to generate docgen information from TypeScript React components. The primary use case is to get the prop types table populated in the <a href="https://github.com/storybooks/storybook/tree/master/addons/info">Storybook Info Addon.
+</a>
+</p>
+
+<p align="center">
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NNRJYNNY5YTJ2">
+    <img src="https://img.shields.io/badge/Donate-PayPal-green.png">
+  </a>
+</p>
 
 ![Example Image](/example.png?raw=true)
 
@@ -226,10 +237,12 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+## Credits
+
+### SVG Logos
+* https://prettier.io
+* https://seeklogo.com
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-## Energy Drinks?
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NNRJYNNY5YTJ2)

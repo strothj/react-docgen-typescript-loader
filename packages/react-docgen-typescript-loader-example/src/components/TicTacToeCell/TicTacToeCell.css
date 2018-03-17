@@ -1,0 +1,16 @@
+.button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 400%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.disabled {
+  cursor: inherit;
+}

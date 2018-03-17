@@ -5,10 +5,12 @@
     "lib": ["esnext"],
     "jsx": "react",
     "strict": true,
+    "moduleResolution": "node",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   }
 }

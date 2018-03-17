@@ -13,6 +13,24 @@ module.exports = (baseConfig, env) => {
     ],
   });
 
+  // Just enabling CSS modules here
+  config.module.rules = config.module.rules
+    .filter(r => r.test.toString() !== "/\\.css$/")
+    .concat({
+      test: /\.css$/,
+      use: [
+        {
+          loader: require.resolve("style-loader"),
+        },
+        {
+          loader: require.resolve("css-loader"),
+          options: {
+            modules: true,
+          },
+        },
+      ],
+    });
+
   config.resolve.extensions.push(".ts", ".tsx");
 
   return config;
