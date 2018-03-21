@@ -23,6 +23,7 @@ Webpack loader to generate docgen information from TypeScript React components. 
 
 ## Guide
 
+* [Changelog](#changelog)
 * [Support Development](#support-development)
 * [Quick Start](#quick-start)
   * [Requirements](#requirements)
@@ -41,6 +42,22 @@ Webpack loader to generate docgen information from TypeScript React components. 
   * [SVG Logos](#svg-logos)
   * [Projects](#projects)
 * [License](#license)
+
+## Changelog
+
+### [Unreleased]
+
+#### Fixed
+
+* Bump `react-docgen-typescript` dependency to `v1.2.6`:
+  > Fix React.SFC-typed functional components  
+  > https://github.com/styleguidist/react-docgen-typescript/commit/e9d57f229b9760967ddc0a746b1c1443f06762b0
+
+### [2.0.2] - 2018-03-03
+
+#### Fixed
+
+* Use original source text when generating amended code (resolves [#7](https://github.com/strothj/react-docgen-typescript-loader/issues/7)).
 
 ## Support Development
 
