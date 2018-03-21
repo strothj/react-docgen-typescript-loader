@@ -2,14 +2,15 @@
   "private": true,
   "workspaces": ["packages/*"],
   "engines": {
-    "node": ">= 8.9",
+    "node": ">= 8.10",
     "yarn": ">= 1.5.1"
   },
   "precommit": [
     "lint",
     "test",
     "clean",
-    "build"
+    "build",
+    "build-storybook"
   ],
   "scripts": {
     "build": "lerna run build",
