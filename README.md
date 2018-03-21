@@ -8,6 +8,9 @@ Webpack loader to generate docgen information from TypeScript React components. 
 </p>
 
 <p align="center">
+  <a href="https://travis-ci.org/strothj/react-docgen-typescript-loader">
+    <img src="https://travis-ci.org/strothj/react-docgen-typescript-loader.png?branch=master">
+  </a>
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NNRJYNNY5YTJ2">
     <img src="https://img.shields.io/badge/Donate-PayPal-green.png" alt="PayPal donation button">
   </a>
