@@ -13,7 +13,7 @@ Webpack loader to generate docgen information from TypeScript React components. 
   </a>
 
   <a href="https://ci.appveyor.com/project/strothj/react-docgen-typescript-loader">
-  <img src="https://ci.appveyor.com/api/projects/status/7sfs8rgwhejo5uly?svg=true">
+  <img src="https://ci.appveyor.com/api/projects/status/6l1xdmf8moud8vyj?svg=true">
   </a>
 
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NNRJYNNY5YTJ2">
