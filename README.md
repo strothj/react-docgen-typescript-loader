@@ -9,10 +9,15 @@ Webpack loader to generate docgen information from TypeScript React components. 
 
 <p align="center">
   <a href="https://travis-ci.org/strothj/react-docgen-typescript-loader">
-    <img src="https://travis-ci.org/strothj/react-docgen-typescript-loader.png?branch=master">
+    <img src="https://travis-ci.org/strothj/react-docgen-typescript-loader.svg?branch=master">
   </a>
+
+  <a href="https://ci.appveyor.com/project/strothj/react-docgen-typescript-loader">
+  <img src="https://ci.appveyor.com/api/projects/status/7sfs8rgwhejo5uly?svg=true">
+  </a>
+
   <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NNRJYNNY5YTJ2">
-    <img src="https://img.shields.io/badge/Donate-PayPal-green.png" alt="PayPal donation button">
+    <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="PayPal donation button">
   </a>
 </p>
 
