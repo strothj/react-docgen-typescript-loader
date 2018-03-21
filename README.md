@@ -17,9 +17,12 @@ Webpack loader to generate docgen information from TypeScript React components. 
   <img src="./example.png" alt="Example screenshot of Storybook with TypeScript props">
   <br>
   <a href="./packages/react-docgen-typescript-loader-example">Example Storybook project</a>
+  <br>
+  <a href="https://react-docgen-typescript-loader.netlify.com">Live Storybook</a>
 </p>
 
 ## Guide
+
 * [Support Development](#support-development)
 * [Quick Start](#quick-start)
   * [Requirements](#requirements)
@@ -58,6 +61,7 @@ or
 
 $ yarn add --dev react-docgen-typescript-loader
 ```
+
 ### Webpack Configuration
 
 **IMPORTANT:** Webpack loaders are executed right-to-left (or bottom-to-top). `react-docgen-typescript-loader` needs to be added under `ts-loader`.
@@ -94,7 +98,7 @@ https://github.com/storybooks/storybook/tree/master/addons/info
 
 ### Including Component Description
 
-The Storybook Info Addon is able to populate the component description from your component's documentation. It does this when your story name matches the display name of your component. The prop tables will popular in either case.
+The Storybook Info Addon is able to populate the component description from your component's documentation. It does this when your story name matches the display name of your component. The prop tables will populate in either case.
 
 ![Example image, how to include component description](/example-story-name.png)
 
@@ -126,7 +130,7 @@ interface Props {
   value?: " " | "X" | "O";
 
   /** Cell position on game board. */
-  position: { x: number; y: number };
+  position: { x: number, y: number };
 
   /** Called when an empty cell is clicked. */
   onClick?: (x: number, y: number) => void;
@@ -288,10 +292,12 @@ Please make sure to update tests as appropriate.
 ## Credits
 
 ### SVG Logos
+
 * https://prettier.io
 * https://seeklogo.com
 
 ### Projects
+
 * [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript)
 
 ## License
