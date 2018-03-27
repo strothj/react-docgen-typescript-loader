@@ -70,10 +70,11 @@ function processResource(
   // Configure parser using settings provided to loader.
   // See: node_modules/react-docgen-typescript/lib/parser.d.ts
   let parser: FileParser = withDefaultConfig(parserOptions);
-  if (options.tsconfigPath)
+  if (options.tsconfigPath) {
     parser = withCustomConfig(options.tsconfigPath, parserOptions);
-  else if (options.compilerOptions)
+  } else if (options.compilerOptions) {
     parser = withCompilerOptions(options.compilerOptions, parserOptions);
+  }
 
   const componentDocs = parser.parse(this.resourcePath);
 

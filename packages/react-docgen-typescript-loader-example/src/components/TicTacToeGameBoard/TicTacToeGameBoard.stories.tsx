@@ -31,8 +31,8 @@ for (let i = 0; i < 9; i += 1) {
 
 const gameCells: ReactElement<any>[] = [];
 const gameCellValues = "XOX O O X";
-for (let y = 0; y < 3; y += 1)
-  for (let x = 0; x < 3; x += 1)
+for (let y = 0; y < 3; y += 1) {
+  for (let x = 0; x < 3; x += 1) {
     gameCells.push(
       <TicTacToeCell
         key={`${x}${y}`}
@@ -40,3 +40,5 @@ for (let y = 0; y < 3; y += 1)
         position={{ x, y }}
       />,
     );
+  }
+}
