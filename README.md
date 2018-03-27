@@ -55,11 +55,16 @@ Webpack loader to generate docgen information from TypeScript React components. 
 
 ### [Unreleased]
 
+* Use Webpack 4 version of Storybook in example project.
+
+### [2.0.3] - 2018-03-26
+
 #### Fixed
 
 * Bump `react-docgen-typescript` dependency to `v1.2.6`:
   > Fix React.SFC-typed functional components  
   > https://github.com/styleguidist/react-docgen-typescript/commit/e9d57f229b9760967ddc0a746b1c1443f06762b0
+* Loader option `setDisplayName` now correctly accepts `false` value.
 
 ### [2.0.2] - 2018-03-03
 

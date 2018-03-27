@@ -18,7 +18,7 @@
     "@types/storybook__addon-info": "^3.2.1",
     "@types/storybook__react": "^3.0.6",
     "babel-core": "^6.26.0",
-    "react-docgen-typescript-loader": "^2.0.2",
+    "react-docgen-typescript-loader": "^2.0.3",
     "rimraf": "^2.6.2",
     "ts-loader": "^3.5.0",
     "typescript": "^2.7.2"
