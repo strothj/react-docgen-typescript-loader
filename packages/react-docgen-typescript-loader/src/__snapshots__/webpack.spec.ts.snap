@@ -47,6 +47,11 @@ exports[`all component fixtures compile successfully fixture: DefaultPropValue.t
 /******/ 		}
 /******/ 	};
 /******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -62,12 +67,18 @@ exports[`all component fixtures compile successfully fixture: DefaultPropValue.t
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = \\"\\";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = \\"./src/__fixtures__/components/DefaultPropValue.tsx\\");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ \\"./src/__fixtures__/components/DefaultPropValue.tsx\\":
+/*!**********************************************************!*\\\\
+  !*** ./src/__fixtures__/components/DefaultPropValue.tsx ***!
+  \\\\**********************************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 \\"use strict\\";
@@ -80,7 +91,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 }
 Object.defineProperty(exports, \\"__esModule\\", { value: true });
-var React = __importStar(__webpack_require__(1));
+var React = __importStar(__webpack_require__(/*! react */ \\"react\\"));
 /**
  * Component with a prop with a default value.
  */
@@ -99,13 +110,19 @@ catch (__react_docgen_typescript_loader_error) { }
 
 
 /***/ }),
-/* 1 */
+
+/***/ \\"react\\":
+/*!************************!*\\\\
+  !*** external \\"react\\" ***!
+  \\\\************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 module.exports = react;
 
 /***/ })
-/******/ ]);"
+
+/******/ });"
 `;
 
 exports[`all component fixtures compile successfully fixture: HyphenatedPropName.tsx 1`] = `
@@ -155,6 +172,11 @@ exports[`all component fixtures compile successfully fixture: HyphenatedPropName
 /******/ 		}
 /******/ 	};
 /******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -170,12 +192,18 @@ exports[`all component fixtures compile successfully fixture: HyphenatedPropName
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = \\"\\";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = \\"./src/__fixtures__/components/HyphenatedPropName.tsx\\");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ \\"./src/__fixtures__/components/HyphenatedPropName.tsx\\":
+/*!************************************************************!*\\\\
+  !*** ./src/__fixtures__/components/HyphenatedPropName.tsx ***!
+  \\\\************************************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 \\"use strict\\";
@@ -188,7 +216,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 }
 Object.defineProperty(exports, \\"__esModule\\", { value: true });
-var React = __importStar(__webpack_require__(1));
+var React = __importStar(__webpack_require__(/*! react */ \\"react\\"));
 /**
  * A component with a hyphenated prop name.
  */
@@ -207,13 +235,19 @@ catch (__react_docgen_typescript_loader_error) { }
 
 
 /***/ }),
-/* 1 */
+
+/***/ \\"react\\":
+/*!************************!*\\\\
+  !*** external \\"react\\" ***!
+  \\\\************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 module.exports = react;
 
 /***/ })
-/******/ ]);"
+
+/******/ });"
 `;
 
 exports[`all component fixtures compile successfully fixture: MultiProps.tsx 1`] = `
@@ -263,6 +297,11 @@ exports[`all component fixtures compile successfully fixture: MultiProps.tsx 1`]
 /******/ 		}
 /******/ 	};
 /******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -278,12 +317,18 @@ exports[`all component fixtures compile successfully fixture: MultiProps.tsx 1`]
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = \\"\\";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = \\"./src/__fixtures__/components/MultiProps.tsx\\");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ \\"./src/__fixtures__/components/MultiProps.tsx\\":
+/*!****************************************************!*\\\\
+  !*** ./src/__fixtures__/components/MultiProps.tsx ***!
+  \\\\****************************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 \\"use strict\\";
@@ -296,7 +341,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 }
 Object.defineProperty(exports, \\"__esModule\\", { value: true });
-var React = __importStar(__webpack_require__(1));
+var React = __importStar(__webpack_require__(/*! react */ \\"react\\"));
 /**
  * This is a component with multiple props.
  */
@@ -315,13 +360,19 @@ catch (__react_docgen_typescript_loader_error) { }
 
 
 /***/ }),
-/* 1 */
+
+/***/ \\"react\\":
+/*!************************!*\\\\
+  !*** external \\"react\\" ***!
+  \\\\************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 module.exports = react;
 
 /***/ })
-/******/ ]);"
+
+/******/ });"
 `;
 
 exports[`all component fixtures compile successfully fixture: MultilineDescription.tsx 1`] = `
@@ -371,6 +422,11 @@ exports[`all component fixtures compile successfully fixture: MultilineDescripti
 /******/ 		}
 /******/ 	};
 /******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -386,12 +442,18 @@ exports[`all component fixtures compile successfully fixture: MultilineDescripti
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = \\"\\";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = \\"./src/__fixtures__/components/MultilineDescription.tsx\\");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ \\"./src/__fixtures__/components/MultilineDescription.tsx\\":
+/*!**************************************************************!*\\\\
+  !*** ./src/__fixtures__/components/MultilineDescription.tsx ***!
+  \\\\**************************************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 \\"use strict\\";
@@ -404,7 +466,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 }
 Object.defineProperty(exports, \\"__esModule\\", { value: true });
-var React = __importStar(__webpack_require__(1));
+var React = __importStar(__webpack_require__(/*! react */ \\"react\\"));
 /**
  * A component with a multiline description.
  *
@@ -425,13 +487,19 @@ catch (__react_docgen_typescript_loader_error) { }
 
 
 /***/ }),
-/* 1 */
+
+/***/ \\"react\\":
+/*!************************!*\\\\
+  !*** external \\"react\\" ***!
+  \\\\************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 module.exports = react;
 
 /***/ })
-/******/ ]);"
+
+/******/ });"
 `;
 
 exports[`all component fixtures compile successfully fixture: MultilinePropDescription.tsx 1`] = `
@@ -481,6 +549,11 @@ exports[`all component fixtures compile successfully fixture: MultilinePropDescr
 /******/ 		}
 /******/ 	};
 /******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -496,12 +569,18 @@ exports[`all component fixtures compile successfully fixture: MultilinePropDescr
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = \\"\\";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = \\"./src/__fixtures__/components/MultilinePropDescription.tsx\\");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ \\"./src/__fixtures__/components/MultilinePropDescription.tsx\\":
+/*!******************************************************************!*\\\\
+  !*** ./src/__fixtures__/components/MultilinePropDescription.tsx ***!
+  \\\\******************************************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 \\"use strict\\";
@@ -514,7 +593,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 }
 Object.defineProperty(exports, \\"__esModule\\", { value: true });
-var React = __importStar(__webpack_require__(1));
+var React = __importStar(__webpack_require__(/*! react */ \\"react\\"));
 /**
  * A component with multiline prop description.
  */
@@ -533,13 +612,19 @@ catch (__react_docgen_typescript_loader_error) { }
 
 
 /***/ }),
-/* 1 */
+
+/***/ \\"react\\":
+/*!************************!*\\\\
+  !*** external \\"react\\" ***!
+  \\\\************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 module.exports = react;
 
 /***/ })
-/******/ ]);"
+
+/******/ });"
 `;
 
 exports[`all component fixtures compile successfully fixture: Simple.tsx 1`] = `
@@ -589,6 +674,11 @@ exports[`all component fixtures compile successfully fixture: Simple.tsx 1`] = `
 /******/ 		}
 /******/ 	};
 /******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -604,12 +694,18 @@ exports[`all component fixtures compile successfully fixture: Simple.tsx 1`] = `
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = \\"\\";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = \\"./src/__fixtures__/components/Simple.tsx\\");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ \\"./src/__fixtures__/components/Simple.tsx\\":
+/*!************************************************!*\\\\
+  !*** ./src/__fixtures__/components/Simple.tsx ***!
+  \\\\************************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 \\"use strict\\";
@@ -622,7 +718,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 }
 Object.defineProperty(exports, \\"__esModule\\", { value: true });
-var React = __importStar(__webpack_require__(1));
+var React = __importStar(__webpack_require__(/*! react */ \\"react\\"));
 /**
  * A simple component.
  */
@@ -641,13 +737,19 @@ catch (__react_docgen_typescript_loader_error) { }
 
 
 /***/ }),
-/* 1 */
+
+/***/ \\"react\\":
+/*!************************!*\\\\
+  !*** external \\"react\\" ***!
+  \\\\************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 module.exports = react;
 
 /***/ })
-/******/ ]);"
+
+/******/ });"
 `;
 
 exports[`all component fixtures compile successfully fixture: TextOnlyComponent.tsx 1`] = `
@@ -697,6 +799,11 @@ exports[`all component fixtures compile successfully fixture: TextOnlyComponent.
 /******/ 		}
 /******/ 	};
 /******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -712,12 +819,18 @@ exports[`all component fixtures compile successfully fixture: TextOnlyComponent.
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = \\"\\";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = \\"./src/__fixtures__/components/TextOnlyComponent.tsx\\");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ \\"./src/__fixtures__/components/TextOnlyComponent.tsx\\":
+/*!***********************************************************!*\\\\
+  !*** ./src/__fixtures__/components/TextOnlyComponent.tsx ***!
+  \\\\***********************************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 \\"use strict\\";
@@ -730,7 +843,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 }
 Object.defineProperty(exports, \\"__esModule\\", { value: true });
-var React = __importStar(__webpack_require__(1));
+var React = __importStar(__webpack_require__(/*! react */ \\"react\\"));
 /**
  * A component with only text content wrapped in a div.
  *
@@ -751,11 +864,17 @@ catch (__react_docgen_typescript_loader_error) { }
 
 
 /***/ }),
-/* 1 */
+
+/***/ \\"react\\":
+/*!************************!*\\\\
+  !*** external \\"react\\" ***!
+  \\\\************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 module.exports = react;
 
 /***/ })
-/******/ ]);"
+
+/******/ });"
 `;

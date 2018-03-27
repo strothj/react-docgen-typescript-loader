@@ -82,5 +82,10 @@ function createWebpackConfig(filename: string): webpack.Configuration {
     externals: {
       react: "react",
     },
+    // Make snapshots more readable by preventing source lines from being
+    // wrapped in eval statements.
+    devtool: false,
+    // Make snapshots more readable by preventing minification.
+    mode: "development",
   };
 }

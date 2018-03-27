@@ -31,9 +31,9 @@
     "react": "^16.2.0",
     "rimraf": "^2.6.2",
     "ts-jest": "^22.4.2",
-    "ts-loader": "^3.5.0",
+    "ts-loader": "^4.1.0",
     "typescript": "^2.7.2",
-    "webpack": "^3.10.0"
+    "webpack": "^4.2.0"
   },
   "dependencies": {
     "ajv": "^6.4.0",
