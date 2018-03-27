@@ -21,10 +21,7 @@
     "react-docgen-typescript-loader": "^2.0.2",
     "rimraf": "^2.6.2",
     "ts-loader": "^3.5.0",
-    "tslint-config-airbnb": "^5.8.0",
-    "tslint-config-prettier": "^1.10.0",
-    "typescript": "^2.7.2",
-    "typescript-snapshots-plugin": "^1.1.1"
+    "typescript": "^2.7.2"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
