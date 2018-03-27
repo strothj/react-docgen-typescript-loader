@@ -43,7 +43,9 @@ function processResource(
   validateOptions(options);
   options.docgenCollectionName =
     options.docgenCollectionName || "STORYBOOK_REACT_CLASSES";
-  options.setDisplayName = options.setDisplayName || true;
+  if (typeof options.setDisplayName !== "boolean") {
+    options.setDisplayName = true;
+  }
 
   // Check resource against whitelists and blacklists.
   const includes = options.includes || ["\\.tsx$"];
