@@ -37,6 +37,8 @@ Webpack loader to generate docgen information from TypeScript React components. 
   * [Requirements](#requirements)
   * [Package Installation](#package-installation)
   * [Webpack Configuration](#webpack-configuration)
+    * [Storybook 4](#storybook-4)
+    * [Storybook 3](#storybook-3)
 * [Documenting Components with Storybook](#documenting-components-with-storybook)
   * [Including Component Description](#including-component-description)
   * [Exporting Components](#exporting-components)
@@ -52,10 +54,6 @@ Webpack loader to generate docgen information from TypeScript React components. 
 * [License](#license)
 
 ## Changelog
-
-### [Unreleased]
-
-* Use Webpack 4 version of Storybook in example project.
 
 ### [2.0.3] - 2018-03-26
 
@@ -97,6 +95,29 @@ $ yarn add --dev react-docgen-typescript-loader
 **IMPORTANT:** Webpack loaders are executed right-to-left (or bottom-to-top). `react-docgen-typescript-loader` needs to be added under `ts-loader`.
 
 Example Storybook config `/storybook/webpack.config.js`:
+
+#### Storybook 4
+
+```javascript
+const path = require("path");
+
+module.exports = (baseConfig, env, config) => {
+  config.module.rules.push({
+    test: /\.tsx?$/,
+    include: path.resolve(__dirname, "../src"),
+    use: [
+      require.resolve("ts-loader"),
+      require.resolve("react-docgen-typescript-loader"),
+    ],
+  });
+
+  config.resolve.extensions.push(".ts", ".tsx");
+
+  return config;
+};
+```
+
+#### Storybook 3
 
 ```javascript
 const path = require("path");
