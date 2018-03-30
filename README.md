@@ -94,7 +94,7 @@ $ yarn add --dev react-docgen-typescript-loader
 
 **IMPORTANT:** Webpack loaders are executed right-to-left (or bottom-to-top). `react-docgen-typescript-loader` needs to be added under `ts-loader`.
 
-Example Storybook config `/storybook/webpack.config.js`:
+Example Storybook config `/.storybook/webpack.config.js`:
 
 #### Storybook 4
 
