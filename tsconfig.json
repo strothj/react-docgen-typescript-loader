@@ -10,11 +10,7 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "esModuleInterop": true,
-    "plugins": [
-      { "name": "tslint-language-service" },
-      { "name": "typescript-snapshots-plugin" }
-    ]
+    "esModuleInterop": true
   },
   "exclude": ["node_modules", "**/node_modules/*"]
 }
