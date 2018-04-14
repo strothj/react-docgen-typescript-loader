@@ -22,7 +22,10 @@ interface Props {
  */
 export class TicTacToeCell extends Component<Props> {
   handleClick = () => {
-    const { position: { x, y }, onClick } = this.props;
+    const {
+      position: { x, y },
+      onClick,
+    } = this.props;
     if (!onClick) return;
 
     onClick(x, y);

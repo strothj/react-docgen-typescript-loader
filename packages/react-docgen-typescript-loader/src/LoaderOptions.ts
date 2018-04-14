@@ -45,4 +45,4 @@ export default interface LoaderOptions {
   includes?: string[];
 
   excludes?: string[];
-};
+}
