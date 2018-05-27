@@ -57,6 +57,21 @@ Webpack loader to generate docgen information from TypeScript React components. 
 
 ## Changelog
 
+### [2.1.0] - 2018-05-27
+
+#### Changed
+
+* Bump `react-docgen-typescript` dependency to `v1.5.0`:
+  > Remove spread logic.  
+  > Support spread default props.  
+  > Use folder name if file name is index.  
+  > chore(parser): refactor displayName extraction  
+  > chore(Parser): read displayName  
+  > parse tsconfig.json mirroring TSC’s process  
+  > Added support for referenced default props in stateless components  
+  > support referenced defaultProps  
+  > Extracts default props from stateless components
+
 ### [2.0.3] - 2018-03-26
 
 #### Fixed
