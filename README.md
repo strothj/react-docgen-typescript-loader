@@ -15,10 +15,6 @@ Webpack loader to generate docgen information from TypeScript React components. 
   <a href="https://ci.appveyor.com/project/strothj/react-docgen-typescript-loader">
   <img src="https://ci.appveyor.com/api/projects/status/6l1xdmf8moud8vyj?svg=true">
   </a>
-
-  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NNRJYNNY5YTJ2">
-    <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="PayPal donation button">
-  </a>
 </p>
 
 <p align="center">
@@ -32,7 +28,6 @@ Webpack loader to generate docgen information from TypeScript React components. 
 ## Guide
 
 * [Changelog](#changelog)
-* [Support Development](#support-development)
 * [Quick Start](#quick-start)
   * [Requirements](#requirements)
   * [Package Installation](#package-installation)
@@ -86,10 +81,6 @@ Webpack loader to generate docgen information from TypeScript React components. 
 #### Fixed
 
 * Use original source text when generating amended code (resolves [#7](https://github.com/strothj/react-docgen-typescript-loader/issues/7)).
-
-## Support Development
-
-If you or your organization find this tool useful, please consider a small donation through the donation link above. This would help me spend time on this and other projects. Other contributions like issue reporting, suggestions on improving performance, or corrections for documentation are very welcome.
 
 ## Quick Start
 
