@@ -47,6 +47,8 @@ Webpack loader to generate docgen information from TypeScript React components. 
   * [Optional Performance Settings](#optional-performance-settings)
 * [Alternative Implementation](#alternative-implementation)
 * [Limitations](#limitations)
+  * [React Component Class Import](#react-component-class-import)
+  * [Export Names](#export-names)
 * [Contributing](#contributing)
 * [Credits](#credits)
   * [SVG Logos](#svg-logos)
@@ -195,7 +197,10 @@ interface Props {
 // to be generated correctly.
 export class TicTacToeCell extends Component<Props> {
   handleClick = () => {
-    const { position: { x, y }, onClick } = this.props;
+    const {
+      position: { x, y },
+      onClick,
+    } = this.props;
     if (!onClick) return;
 
     onClick(x, y);
@@ -303,9 +308,36 @@ https://github.com/strothj/react-docgen-typescript-loader/tree/plugin
 ## Limitations
 
 This plugin makes use of the project:
-https://github.com/styleguidist/react-docgen-typescript
+https://github.com/styleguidist/react-docgen-typescript.
+It is subject to the same limitations.
 
-It is subject to the same limitations. Component docgen information can not be
+### React Component Class Import
+
+When extending from `React.Component` as opposed to `Component`, docgens don't seem to be created. Ref issue [#10](https://github.com/strothj/react-docgen-typescript-loader/issues/10) (thanks @StevenLangbroek for tracking down the cause).
+
+Doesn't work:
+
+```
+import React from 'react';
+
+interface IProps {
+  whatever?: string;
+};
+
+export default class MyComponent extends React.Component<IProps> {}
+```
+
+Works:
+
+```
+import React, { Component } from 'react';
+
+export default class MyComponent extends Component<IProps> {}
+```
+
+### Export Names
+
+Component docgen information can not be
 generated for components that are only exported as default. You can work around
 the issue by exporting the component using a named export.
 
