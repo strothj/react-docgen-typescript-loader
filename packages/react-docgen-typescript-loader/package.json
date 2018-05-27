@@ -26,18 +26,18 @@
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^22.4.3",
+    "jest": "^23.0.1",
     "memory-fs": "^0.4.1",
-    "react": "^16.3.1",
+    "react": "^16.4.0",
     "rimraf": "^2.6.2",
-    "ts-jest": "^22.4.2",
-    "ts-loader": "^4.2.0",
-    "typescript": "^2.8.1",
-    "webpack": "^4.5.0"
+    "ts-jest": "^22.4.6",
+    "ts-loader": "^4.3.0",
+    "typescript": "^2.8.3",
+    "webpack": "^4.9.1"
   },
   "dependencies": {
-    "ajv": "^6.4.0",
-    "react-docgen-typescript": "^1.2.6"
+    "ajv": "^6.5.0",
+    "react-docgen-typescript": "^1.5.0"
   },
   "peerDependencies": {
     "typescript": "*"
