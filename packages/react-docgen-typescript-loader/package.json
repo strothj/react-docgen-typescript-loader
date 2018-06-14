@@ -1,6 +1,6 @@
 {
   "name": "react-docgen-typescript-loader",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Webpack loader to generate docgen information from TypeScript React components.",
   "keywords": [
     "storybook",
