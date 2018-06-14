@@ -52,6 +52,14 @@ Webpack loader to generate docgen information from TypeScript React components. 
 
 ## Changelog
 
+### [2.1.1] - 2018-06-13
+
+#### Changed
+
+* Bump `react-docgen-typescript` dependency to `v1.6.0`:
+  > parse can be called with multiple source file paths (thanks to @marionebl PR #91)  
+  > upgraded typescript version and fixed parsing comment problem (thanks to @kbukum PR #97)
+
 ### [2.1.0] - 2018-05-27
 
 #### Changed
