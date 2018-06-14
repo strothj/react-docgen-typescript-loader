@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "ajv": "^6.5.0",
-    "react-docgen-typescript": "^1.5.0"
+    "react-docgen-typescript": "^1.6.0"
   },
   "peerDependencies": {
     "typescript": "*"
