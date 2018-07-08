@@ -10,7 +10,10 @@ import LoaderOptions from "./LoaderOptions";
 import validateOptions from "./validateOptions";
 import generateDocgenCodeBlock from "./generateDocgenCodeBlock";
 
-function loader(this: webpack.loader.LoaderContext, source: string) {
+export default function loader(
+  this: webpack.loader.LoaderContext,
+  source: string,
+) {
   // Loaders can operate in either synchronous or asynchronous mode. Errors in
   // asynchronous mode should be reported using the supplied callback.
 
@@ -18,10 +21,11 @@ function loader(this: webpack.loader.LoaderContext, source: string) {
   const callback = this.async();
 
   try {
-    const newSource = processResource.call(this, source);
+    const newSource = processResource(this, source);
 
     if (!callback) return newSource;
     callback(null, newSource);
+    return;
   } catch (e) {
     if (callback) {
       callback(e);
@@ -32,14 +36,14 @@ function loader(this: webpack.loader.LoaderContext, source: string) {
 }
 
 function processResource(
-  this: webpack.loader.LoaderContext,
+  context: webpack.loader.LoaderContext,
   source: string,
 ): string {
   // Mark the loader as being cacheable since the result should be
   // deterministic.
-  this.cacheable(true);
+  context.cacheable(true);
 
-  const options: LoaderOptions = this.query || {};
+  const options: LoaderOptions = context.query || {};
   validateOptions(options);
   options.docgenCollectionName =
     options.docgenCollectionName || "STORYBOOK_REACT_CLASSES";
@@ -50,9 +54,11 @@ function processResource(
   // Check resource against whitelists and blacklists.
   const includes = options.includes || ["\\.tsx$"];
   const excludes = options.excludes || ["node_modules"];
-  let shouldProcess = includes.some(i => new RegExp(i).test(this.resourcePath));
+  let shouldProcess = includes.some(i =>
+    new RegExp(i).test(context.resourcePath),
+  );
   shouldProcess = shouldProcess
-    ? !excludes.some(i => new RegExp(i).test(this.resourcePath))
+    ? !excludes.some(i => new RegExp(i).test(context.resourcePath))
     : false;
   if (!shouldProcess) return source;
 
@@ -78,12 +84,12 @@ function processResource(
     parser = withCompilerOptions(options.compilerOptions, parserOptions);
   }
 
-  const componentDocs = parser.parse(this.resourcePath);
+  const componentDocs = parser.parse(context.resourcePath);
 
   // Return amended source code if there is docgen information available.
   if (componentDocs.length) {
     return generateDocgenCodeBlock({
-      filename: this.resourcePath,
+      filename: context.resourcePath,
       source,
       componentDocs,
       docgenCollectionName: options.docgenCollectionName,
@@ -94,5 +100,3 @@ function processResource(
   // Return unchanged source code if no docgen information was available.
   return source;
 }
-
-export default loader;
