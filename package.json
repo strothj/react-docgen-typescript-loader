@@ -1,8 +1,9 @@
 {
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": ["packages/*"],
+    "nohoist": ["react-docgen-typescript-loader-styleguidist-test/@types/**"]
+  },
   "engines": {
     "node": ">= 8.10",
     "yarn": ">= 1.5.1"
