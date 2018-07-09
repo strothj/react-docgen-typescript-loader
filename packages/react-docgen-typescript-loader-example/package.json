@@ -21,6 +21,7 @@
     "@types/storybook__react": "^3.0.8",
     "@types/webpack": "^4.4.5",
     "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
     "react-docgen-typescript-loader": "^2.0.3",
     "rimraf": "^2.6.2",
     "ts-loader": "^4.4.2",
