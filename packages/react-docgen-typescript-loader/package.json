@@ -23,10 +23,11 @@
     "build": "tsc -p ./tsconfig.build.json",
     "clean": "rimraf dist",
     "start": "tsc -p ./tsconfig.build.json -w",
-    "test": "jest"
+    "test": "cross-env FORCE_COLOR=0 jest"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "cross-env": "^5.2.0",
     "jest": "^23.3.0",
     "memory-fs": "^0.4.1",
     "react": "^16.4.1",

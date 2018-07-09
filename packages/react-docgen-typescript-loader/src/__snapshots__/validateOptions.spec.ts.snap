@@ -3,39 +3,39 @@
 exports[`skipPropsWithName rejects empty array 1`] = `
 "react-docgen-typescript-loader
 
-  [4mOptions Validation Error[24m
+  Options Validation Error
 
-  [2moptions[22m.skipPropsWithName  [94mshould match some schema in anyOf[39m
-  [2moptions[22m.skipPropsWithName  [94mshould NOT have less than 1 items[39m
-  [2moptions[22m.skipPropsWithName  [94mshould be string[39m
+  options.skipPropsWithName  should match some schema in anyOf
+  options.skipPropsWithName  should NOT have less than 1 items
+  options.skipPropsWithName  should be string
 "
 `;
 
 exports[`skipPropsWithName rejects empty string 1`] = `
 "react-docgen-typescript-loader
 
-  [4mOptions Validation Error[24m
+  Options Validation Error
 
-  [2moptions[22m.skipPropsWithName  [94mshould match some schema in anyOf[39m
-  [2moptions[22m.skipPropsWithName  [94mshould be array[39m
-  [2moptions[22m.skipPropsWithName  [94mshould NOT be shorter than 1 characters[39m
+  options.skipPropsWithName  should match some schema in anyOf
+  options.skipPropsWithName  should be array
+  options.skipPropsWithName  should NOT be shorter than 1 characters
 "
 `;
 
 exports[`throws error on unexpected field 1`] = `
 "react-docgen-typescript-loader
 
-  [4mOptions Validation Error[24m
+  Options Validation Error
 
-  [2moptions[22m['invalidField']  [94mis an invalid additional property[39m
+  options['invalidField']  is an invalid additional property
 "
 `;
 
 exports[`v2 includes/excludes fields throws error if included 1`] = `
 "react-docgen-typescript-loader
 
-  [4mOptions Validation Error[24m
+  Options Validation Error
 
-  [2moptions[22m['includes']  [94mis an invalid additional property[39m
+  options['includes']  is an invalid additional property
 "
 `;

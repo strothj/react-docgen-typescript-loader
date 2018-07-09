@@ -1,8 +1,12 @@
 {
   "private": true,
   "workspaces": {
-    "packages": ["packages/*"],
-    "nohoist": ["react-docgen-typescript-loader-styleguidist-test/@types/**"]
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "react-docgen-typescript-loader-styleguidist-test/@types/**"
+    ]
   },
   "engines": {
     "node": ">= 8.10",
@@ -18,7 +22,7 @@
   "scripts": {
     "build": "lerna run build",
     "clean": "lerna run clean",
-    "test": "cross-env FORCE_COLOR=1 lerna run --stream --concurrency 1 test",
+    "test": "lerna run --stream --concurrency 1 test",
     "lint": "tslint -p ./",
     "storybook": "lerna run --parallel storybook",
     "build-storybook": "lerna run --parallel build-storybook"
@@ -29,7 +33,6 @@
     "@types/node": "^10.5.2",
     "@types/react": "^16.4.6",
     "@types/webpack": "^4.4.5",
-    "cross-env": "^5.2.0",
     "lerna": "^2.11.0",
     "pre-commit": "^1.2.2",
     "prettier": "^1.13.7",
