@@ -12,6 +12,7 @@ import {
 import LoaderOptions from "./LoaderOptions";
 import validateOptions from "./validateOptions";
 import generateDocgenCodeBlock from "./generateDocgenCodeBlock";
+import { getOptions } from "loader-utils";
 
 export default function loader(
   this: webpack.loader.LoaderContext,
@@ -46,8 +47,9 @@ function processResource(
   // deterministic.
   context.cacheable(true);
 
-  const options: LoaderOptions = context.query || {};
+  const options: LoaderOptions = getOptions(context) || {};
   validateOptions(options);
+
   options.docgenCollectionName =
     options.docgenCollectionName || "STORYBOOK_REACT_CLASSES";
   if (typeof options.setDisplayName !== "boolean") {
