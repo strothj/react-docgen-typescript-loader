@@ -52,3 +52,13 @@ describe("compilerOptions", () => {
     ).not.toThrow();
   });
 });
+
+describe("v2 includes/excludes fields", () => {
+  it("throws error if included", () => {
+    expect(() =>
+      validateOptions({
+        includes: ["*\\.stories\\.tsx$"],
+      } as any),
+    ).toThrowErrorMatchingSnapshot();
+  });
+});

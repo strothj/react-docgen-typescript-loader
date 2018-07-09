@@ -54,17 +54,6 @@ function processResource(
     options.setDisplayName = true;
   }
 
-  // Check resource against whitelists and blacklists.
-  const includes = options.includes || ["\\.tsx$"];
-  const excludes = options.excludes || ["node_modules"];
-  let shouldProcess = includes.some(i =>
-    new RegExp(i).test(context.resourcePath),
-  );
-  shouldProcess = shouldProcess
-    ? !excludes.some(i => new RegExp(i).test(context.resourcePath))
-    : false;
-  if (!shouldProcess) return source;
-
   // Convert the loader's flat options into the expected structure for
   // react-docgen-typescript.
   // See: node_modules/react-docgen-typescript/lib/parser.d.ts
