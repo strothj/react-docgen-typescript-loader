@@ -1,4 +1,7 @@
 import webpack from "webpack";
+// TODO: Import from "react-docgen-typescript" directly when
+// https://github.com/styleguidist/react-docgen-typescript/pull/104 is hopefully
+// merged in. Will be considering to make a peer dependency as that point.
 import {
   withDefaultConfig,
   withCustomConfig,
