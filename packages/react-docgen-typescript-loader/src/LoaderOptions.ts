@@ -1,4 +1,5 @@
 import { CompilerOptions } from "typescript";
+import { PropFilter } from "react-docgen-typescript/lib/parser.js";
 
 export default interface LoaderOptions {
   /** Avoid including docgen information for the prop or props specified. */
@@ -7,6 +8,11 @@ export default interface LoaderOptions {
   /** Avoid including docgen information for props without documentation. */
   skipPropsWithoutDoc?: boolean;
 
+  /**
+   * Specify function to filter props.
+   * If either skipPropsWithName or skipPropsWithoutDoc will be specified this will not be used.
+   */
+  propFilter?: PropFilter;
   /**
    * Specify the location of the tsconfig.json to use. Can not be used with
    * compilerOptions.

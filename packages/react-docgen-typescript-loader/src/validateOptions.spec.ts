@@ -30,6 +30,16 @@ describe("skipPropsWithName", () => {
   });
 });
 
+describe("prop filter", () => {
+  it("accepts function", () => {
+    expect(() =>
+      validateOptions({
+        propFilter: () => true,
+      } as any),
+    ).not.toThrow();
+  });
+});
+
 describe("compilerOptions", () => {
   it("accepts object of any shape", () => {
     expect(() =>
