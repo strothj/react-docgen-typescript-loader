@@ -17,6 +17,18 @@ const validate = ajv.compile({
       type: "boolean",
     },
 
+    propFilter: {
+      // this is really { type: "function" }
+      not: {
+        oneOf: [
+          { type: "string" },
+          { type: "number" },
+          { type: "object" },
+          { type: "array" },
+        ],
+      },
+    },
+
     tsconfigPath: {
       type: "string",
       minLength: 1,

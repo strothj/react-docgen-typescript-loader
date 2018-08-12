@@ -66,7 +66,7 @@ function processResource(
             skipPropsWithName: options.skipPropsWithName || undefined,
             skipPropsWithoutDoc: options.skipPropsWithoutDoc || undefined,
           }
-        : undefined,
+        : options.propFilter,
   };
 
   // Configure parser using settings provided to loader.
