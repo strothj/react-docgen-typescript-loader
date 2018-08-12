@@ -27,36 +27,43 @@ Webpack loader to generate docgen information from TypeScript React components. 
 
 ## Guide
 
-* [Changelog](#changelog)
-* [Quick Start](#quick-start)
-  * [Requirements](#requirements)
-  * [Package Installation](#package-installation)
-  * [Webpack Configuration](#webpack-configuration)
-    * [Storybook 4](#storybook-4)
-    * [Storybook 3](#storybook-3)
-* [Documenting Components with Storybook](#documenting-components-with-storybook)
-  * [Including Component Description](#including-component-description)
-  * [Exporting Components](#exporting-components)
-* [Loader Options](#loader-options)
-* [Performance](#performance)
-  * [Optional Performance Settings](#optional-performance-settings)
-* [Alternative Implementation](#alternative-implementation)
-* [Limitations](#limitations)
-  * [React Component Class Import](#react-component-class-import)
-  * [Export Names](#export-names)
-* [Contributing](#contributing)
-* [Credits](#credits)
-  * [SVG Logos](#svg-logos)
-  * [Projects](#projects)
-* [License](#license)
+- [Changelog](#changelog)
+- [Quick Start](#quick-start)
+  - [Requirements](#requirements)
+  - [Package Installation](#package-installation)
+  - [Webpack Configuration](#webpack-configuration)
+    - [Storybook 4](#storybook-4)
+    - [Storybook 3](#storybook-3)
+- [Documenting Components with Storybook](#documenting-components-with-storybook)
+  - [Including Component Description](#including-component-description)
+  - [Exporting Components](#exporting-components)
+- [Loader Options](#loader-options)
+- [Performance](#performance)
+  - [Optional Performance Settings](#optional-performance-settings)
+- [Alternative Implementation](#alternative-implementation)
+- [Limitations](#limitations)
+  - [React Component Class Import](#react-component-class-import)
+  - [Export Names](#export-names)
+- [Contributing](#contributing)
+- [Credits](#credits)
+  - [SVG Logos](#svg-logos)
+  - [Projects](#projects)
+- [License](#license)
 
 ## Changelog
+
+### [2.2.0] - 2018-08-11
+
+#### Added
+
+- Add the ability to filter props using a filtering function. Thanks @rkostrzewski.
+  https://github.com/strothj/react-docgen-typescript-loader/pull/21
 
 ### [2.1.1] - 2018-06-13
 
 #### Changed
 
-* Bump `react-docgen-typescript` dependency to `v1.6.0`:
+- Bump `react-docgen-typescript` dependency to `v1.6.0`:
   > parse can be called with multiple source file paths (thanks to @marionebl PR #91)  
   > upgraded typescript version and fixed parsing comment problem (thanks to @kbukum PR #97)
 
@@ -64,7 +71,7 @@ Webpack loader to generate docgen information from TypeScript React components. 
 
 #### Changed
 
-* Bump `react-docgen-typescript` dependency to `v1.5.0`:
+- Bump `react-docgen-typescript` dependency to `v1.5.0`:
   > Remove spread logic.  
   > Support spread default props.  
   > Use folder name if file name is index.  
@@ -79,16 +86,16 @@ Webpack loader to generate docgen information from TypeScript React components. 
 
 #### Fixed
 
-* Bump `react-docgen-typescript` dependency to `v1.2.6`:
+- Bump `react-docgen-typescript` dependency to `v1.2.6`:
   > Fix React.SFC-typed functional components  
   > https://github.com/styleguidist/react-docgen-typescript/commit/e9d57f229b9760967ddc0a746b1c1443f06762b0
-* Loader option `setDisplayName` now correctly accepts `false` value.
+- Loader option `setDisplayName` now correctly accepts `false` value.
 
 ### [2.0.2] - 2018-03-03
 
 #### Fixed
 
-* Use original source text when generating amended code (resolves [#7](https://github.com/strothj/react-docgen-typescript-loader/issues/7)).
+- Use original source text when generating amended code (resolves [#7](https://github.com/strothj/react-docgen-typescript-loader/issues/7)).
 
 ## Quick Start
 
@@ -391,12 +398,12 @@ Please make sure to update tests as appropriate.
 
 ### SVG Logos
 
-* https://prettier.io
-* https://seeklogo.com
+- https://prettier.io
+- https://seeklogo.com
 
 ### Projects
 
-* [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript)
+- [react-docgen-typescript](https://github.com/styleguidist/react-docgen-typescript)
 
 ## License
 
