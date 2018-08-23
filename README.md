@@ -28,6 +28,7 @@ Webpack loader to generate docgen information from TypeScript React components. 
 ## Guide
 
 - [Changelog](#changelog)
+- [Migrating from V2 to V3](#migrating-from-v2-to-v3)
 - [Quick Start](#quick-start)
   - [Requirements](#requirements)
   - [Package Installation](#package-installation)
@@ -51,6 +52,13 @@ Webpack loader to generate docgen information from TypeScript React components. 
 - [License](#license)
 
 ## Changelog
+
+### [3.0.0] - 2018-08-23
+
+#### Changed
+
+- Removed the loader options `includes` and `excludes`. Closes [#15](https://github.com/strothj/react-docgen-typescript-loader/issues/15)
+- Use the `loader-utils` Webpack page to process loader options. Closes [22](https://github.com/strothj/react-docgen-typescript-loader/issues/22).
 
 ### [2.2.0] - 2018-08-11
 
@@ -96,6 +104,18 @@ Webpack loader to generate docgen information from TypeScript React components. 
 #### Fixed
 
 - Use original source text when generating amended code (resolves [#7](https://github.com/strothj/react-docgen-typescript-loader/issues/7)).
+
+## Migrating from V2 to V3
+
+Version 2 supported the options `includes` and `excludes`, which were arrays of regular expressions. If you made use of these options, remove them from and use the Webpack equivalents.
+
+`includes` would default to `["\\.tsx$"]` which meant that only files ending in the extension `.ts` or `.tsx` would be processed. This default behavior is already covered by Webpack's `test` field.
+
+`excludes` would default to `["node_modules"]`. This would prevent the processing of files in node_modules. This option was added to allow further filtering to hopefully speed up processing. When this loader is used in monorepo environments, this option would complicate configuration.
+
+In version 3, the loader no longer performs its own filtering. If you relied on the additional filtering behavior, you should be able to reimplement it using options in Webpack.
+
+This change shouldn't affect the majority of projects.
 
 ## Quick Start
 
@@ -282,43 +302,10 @@ stories.add(
 | compilerOptions      | typescript.CompilerOptions | Specify TypeScript compiler options. Can not be used with tsconfigPath.                                                                                                                                                                                                                                                                                     |
 | docgenCollectionName | string or null             | Specify the docgen collection name to use. All docgen information will be collected into this global object. Set to `null` to disable. Defaults to `STORYBOOK_REACT_CLASSES` for use with the Storybook Info Addon. https://github.com/gongreg/react-storybook-addon-docgen                                                                                 |
 | setDisplayName       | boolean                    | Automatically set the components' display name. If you want to set display names yourself or are using another plugin to do this, you should disable this option. Defaults to `true`. This is used to preserve component display names during a production build of Storybook.                                                                              |
-| includes             | string[]                   | Converted to an array of regular expressions. Files matching these regular expressions will be processed by the parser. Defaults to `["\\.tsx$"]`                                                                                                                                                                                                           |
-| excludes             | string[]                   | See includes. Any file matched by includes will be checked against excludes. Any matching excludes will not be processed by the parser. Defaults to `["node_modules"]`.                                                                                                                                                                                     |
 
 ## Performance
 
 There is a significant startup cost due to the initial type parsing. Once the project is running in watch mode, things should be smoother due to Webpack caching.
-
-### Optional Performance Settings
-
-You can speed up the loading performance by restricting the set of project files which are processed by the parser. It accepts an optional array of includes and excludes as strings (converted to regular expressions). By default `includes` is set to `["\\.tsx$"]` and excludes is set to `["node_modules"]`.
-
-Folder structure:
-
-```
-/src/components/
-  /SimpleButton/SimpleButton.tsx
-  /SimpleButton/SimpleButton.stories.tsx
-```
-
-Webpack:
-
-```javascript
-{
-  test: /\.tsx?$/,
-  exclude: /node_modules/,
-  use: [
-    "ts-loader",
-    {
-      loader: "react-docgen-typescript-loader",
-      options: {
-        includes: ["components.*\\.tsx$"],
-        excludes: ["stories\\.tsx$"]
-      }
-    }
-  ]
-}
-```
 
 ## Alternative Implementation
 
