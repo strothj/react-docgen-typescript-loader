@@ -6,6 +6,7 @@
     "import-name": false,
     "variable-name": false,
     "strict-boolean-expressions": false,
+    "no-unused-variable": false,
     "prettier": true
   }
 }

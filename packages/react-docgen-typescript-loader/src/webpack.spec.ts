@@ -19,6 +19,9 @@ describe("all component fixtures compile successfully", () => {
 function compileFixture(filename: string): Promise<string> {
   const fs = new MemoryFS();
   const compiler = webpack(createWebpackConfig(filename));
+  // @ts-ignore
+  // TODO: The type definition for MemoryFS is missing the purge method, which
+  // is now expected by the type definitions for Webpack.
   compiler.outputFileSystem = fs;
 
   // The following executes the Webpack compiler and checks for the three
