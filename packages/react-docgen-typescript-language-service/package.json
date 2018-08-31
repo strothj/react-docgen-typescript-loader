@@ -1,0 +1,30 @@
+{
+  "name": "react-docgen-typescript-language-service",
+  "version": "1.0.0",
+  "description": "Provides a language service for use with the package react-docgen-typescript",
+  "homepage": "https://github.com/strothj/react-docgen-typescript-loader",
+  "bugs": "https://github.com/strothj/react-docgen-typescript-loader/issues",
+  "repository": "https://github.com/strothj/react-docgen-typescript-loader.git",
+  "author": "strothj (https://github.com/strothj)",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "tsc -p ./tsconfig.build.json",
+    "clean": "rimraf dist",
+    "start": "tsc -p ./tsconfig.build.json -w",
+    "test": "cross-env FORCE_COLOR=0 jest"
+  },
+  "dependencies": {
+    "ts-loader": "^4.5.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "jest": "^23.3.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^23.0.0",
+    "typescript": "^3.0.1"
+  }
+}

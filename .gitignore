@@ -5,3 +5,5 @@ dist/
 *error.log
 lerna-debug.log
 storybook-static/
+.yalc/
+yalc.lock
