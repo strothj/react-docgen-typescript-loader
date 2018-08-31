@@ -2,15 +2,15 @@ import path from "path";
 import webpack from "webpack";
 import loader from "./loader";
 
+type LoaderCallback = webpack.loader.loaderCallback;
+
 // TODO: Isolate loader.ts dependencies and test in isolation.
 // TODO: Test error handling in asynchronous vs synchronous mode.
 
-const mockLoaderContextAsyncCallback = jest.fn();
 const mockLoaderContextCacheable = jest.fn();
 const mockLoaderContextResourcePath = jest.fn();
 
 beforeEach(() => {
-  mockLoaderContextAsyncCallback.mockReset();
   mockLoaderContextCacheable.mockReset();
   mockLoaderContextResourcePath.mockReset();
   mockLoaderContextResourcePath.mockImplementation(() =>
@@ -18,17 +18,26 @@ beforeEach(() => {
   );
 });
 
-it("marks the loader as being cacheable", () => {
-  executeLoaderWithBoundContext();
+it("marks the loader as being cacheable", done => {
+  const loaderCallback: LoaderCallback = (error, content) => {
+    if (error) {
+      done(error);
+      return;
+    }
 
-  expect(mockLoaderContextCacheable.mock.calls[0][0]).toEqual(true);
+    expect(mockLoaderContextCacheable.mock.calls[0][0]).toEqual(true);
+    expect(content).toBeTruthy();
+    done();
+  };
+
+  executeLoaderWithBoundContext(loaderCallback);
 });
 
 // Execute loader with its "this" set to an instance of LoaderContext.
-function executeLoaderWithBoundContext() {
+function executeLoaderWithBoundContext(loaderCallback: LoaderCallback) {
   loader.call(
     {
-      async: mockLoaderContextAsyncCallback,
+      async: () => loaderCallback,
       cacheable: mockLoaderContextCacheable,
       resourcePath: mockLoaderContextResourcePath(),
     } as Partial<webpack.loader.LoaderContext>,

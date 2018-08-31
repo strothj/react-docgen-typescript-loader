@@ -18,31 +18,21 @@ export default function loader(
   this: webpack.loader.LoaderContext,
   source: string,
 ) {
-  // Loaders can operate in either synchronous or asynchronous mode. Errors in
-  // asynchronous mode should be reported using the supplied callback.
-
-  // Will return a callback if operating in asynchronous mode.
   const callback = this.async();
-
-  try {
-    const newSource = processResource(this, source);
-
-    if (!callback) return newSource;
-    callback(null, newSource);
-    return;
-  } catch (e) {
-    if (callback) {
-      callback(e);
-      return;
-    }
-    throw e;
+  if (!callback) {
+    throw new Error("Expected loader to operate in asynchronous mode.");
   }
+
+  processResource(this, source).then(
+    newSource => callback(null, newSource),
+    error => callback(error),
+  );
 }
 
-function processResource(
+async function processResource(
   context: webpack.loader.LoaderContext,
   source: string,
-): string {
+): Promise<string> {
   // Mark the loader as being cacheable since the result should be
   // deterministic.
   context.cacheable(true);
