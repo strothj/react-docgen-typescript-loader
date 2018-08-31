@@ -1,4 +1,4 @@
-import { LoaderOptions, LogLevel } from "ts-loader/dist/interfaces";
+import { LoaderOptions, LogLevel } from "./tsLoader";
 import { LanguageServiceOptions } from "./LanguageServiceOptions";
 
 /**
