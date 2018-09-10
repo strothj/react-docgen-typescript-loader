@@ -9105,9 +9105,13 @@ react-docgen-typescript-loader@^2.0.3:
     ajv "^6.5.0"
     react-docgen-typescript "^1.6.0"
 
-react-docgen-typescript@^1.6.0, react-docgen-typescript@^1.6.1:
+react-docgen-typescript@^1.6.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-1.7.0.tgz#53fce38758a60a246bb3601601b1291500441fa9"
+
+react-docgen-typescript@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-1.8.0.tgz#4c522f44bcd6d823f41711e4f01be55ef261ece2"
 
 react-docgen@3.0.0-beta12:
   version "3.0.0-beta12"
