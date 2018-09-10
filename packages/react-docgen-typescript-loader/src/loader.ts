@@ -8,11 +8,13 @@ import {
   withCompilerOptions,
   ParserOptions,
   FileParser,
+  ComponentDoc,
 } from "react-docgen-typescript/lib/parser.js";
 import LoaderOptions from "./LoaderOptions";
 import validateOptions from "./validateOptions";
 import generateDocgenCodeBlock from "./generateDocgenCodeBlock";
 import { getOptions } from "loader-utils";
+import { getProgramProvider, ProgramProvider } from "./language-service";
 
 export default function loader(
   this: webpack.loader.LoaderContext,
@@ -68,7 +70,19 @@ async function processResource(
     parser = withCompilerOptions(options.compilerOptions, parserOptions);
   }
 
-  const componentDocs = parser.parse(context.resourcePath);
+  let componentDocs: ComponentDoc[];
+  let programProvider: ProgramProvider | undefined;
+
+  if (options.experimentalLanguageServiceProvider) {
+    programProvider = getProgramProvider(
+      context,
+      options,
+      source,
+      options.experimentalLanguageServiceProvider,
+    );
+  }
+
+  componentDocs = parser.parse(context.resourcePath, programProvider);
 
   // Return amended source code if there is docgen information available.
   if (componentDocs.length) {
