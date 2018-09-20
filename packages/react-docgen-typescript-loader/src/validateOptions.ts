@@ -17,7 +17,7 @@ const schema = {
     },
 
     propFilter: {
-      // This is really { type: "function" }.
+      // this is really { type: "function" }
       not: {
         oneOf: [
           { type: "string" },
@@ -43,18 +43,6 @@ const schema = {
 
     setDisplayName: {
       type: "boolean",
-    },
-
-    experimentalLanguageServiceProvider: {
-      // This is really { type: "function" }.
-      not: {
-        oneOf: [
-          { type: "string" },
-          { type: "number" },
-          { type: "object" },
-          { type: "array" },
-        ],
-      },
     },
   },
 };

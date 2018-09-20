@@ -38,7 +38,6 @@
     "jest": "^23.3.0",
     "memory-fs": "^0.4.1",
     "react": "^16.4.1",
-    "react-docgen-typescript-language-service": "*",
     "rimraf": "^2.6.2",
     "ts-jest": "^23.0.0",
     "ts-loader": "^4.4.2",

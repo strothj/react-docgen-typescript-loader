@@ -47,11 +47,4 @@ export default interface LoaderOptions {
    * @default true
    */
   setDisplayName?: boolean;
-
-  /**
-   * Experimental support for running a TypeScript language service as part of
-   * the loader. Expects the function `getLanguageServiceInstance` from the
-   * package `react-docgen-typescript-language-service` if used.
-   */
-  experimentalLanguageServiceProvider?: any;
 }
