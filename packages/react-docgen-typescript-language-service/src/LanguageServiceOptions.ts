@@ -1,4 +1,4 @@
-import { LoaderOptions } from "./tsLoader";
+import { LoaderOptions } from "ts-loader/dist/interfaces";
 
 export type CommonOptions =
   | "silent"

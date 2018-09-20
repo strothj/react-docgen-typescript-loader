@@ -1,8 +1,7 @@
+import { getTypeScriptInstance } from "ts-loader/dist/instances";
+import { Webpack, Resolve } from "ts-loader/dist/interfaces";
 import { LanguageServiceOptions } from "./LanguageServiceOptions";
 import { makeLoaderOptions } from "./makeLoaderOptions";
-import { instances, Webpack, Resolve } from "./tsLoader";
-
-const { getTypeScriptInstance } = instances;
 
 export function getLanguageServiceInstance(
   languageServiceOptions: LanguageServiceOptions,
