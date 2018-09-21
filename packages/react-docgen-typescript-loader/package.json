@@ -1,6 +1,6 @@
 {
   "name": "react-docgen-typescript-loader",
-  "version": "3.0.0-rc.0",
+  "version": "3.0.0",
   "description": "Webpack loader to generate docgen information from TypeScript React components.",
   "keywords": [
     "storybook",
@@ -28,7 +28,7 @@
   "dependencies": {
     "@webpack-contrib/schema-utils": "^1.0.0-beta.0",
     "loader-utils": "^1.1.0",
-    "react-docgen-typescript": "^1.6.0"
+    "react-docgen-typescript": "^1.9.0"
   },
   "peerDependencies": {
     "typescript": "*"
