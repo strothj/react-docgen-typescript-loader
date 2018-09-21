@@ -53,10 +53,11 @@ Webpack loader to generate docgen information from TypeScript React components. 
 
 ## Changelog
 
-### [3.0.0] - 2018-08-23
+### [3.0.0] - 2018-09-20
 
 #### Changed
 
+- Bump `react-docgen-typescript` dependency to `v1.9.0`
 - Removed the loader options `includes` and `excludes`. Closes [#15](https://github.com/strothj/react-docgen-typescript-loader/issues/15)
 - Use the `loader-utils` Webpack page to process loader options. Closes [22](https://github.com/strothj/react-docgen-typescript-loader/issues/22).
 

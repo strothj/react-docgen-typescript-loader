@@ -7850,6 +7850,10 @@ react-docgen-typescript@^1.6.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-1.7.0.tgz#53fce38758a60a246bb3601601b1291500441fa9"
 
+react-docgen-typescript@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-1.9.0.tgz#29b3b66dba2fea663e29e3f1d162bbba5d0c2770"
+
 react-docgen@^3.0.0-beta11:
   version "3.0.0-rc.0"
   resolved "https://registry.yarnpkg.com/react-docgen/-/react-docgen-3.0.0-rc.0.tgz#6452afc31649d651c9bafce9b94a470581530b76"
