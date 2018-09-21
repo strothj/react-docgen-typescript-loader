@@ -5,8 +5,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   },
   "devDependencies": {
     "@storybook/addon-actions": "4.0.0-alpha.2",
@@ -14,18 +14,24 @@
     "@storybook/addon-links": "4.0.0-alpha.2",
     "@storybook/addons": "4.0.0-alpha.2",
     "@storybook/react": "4.0.0-alpha.2",
-    "@types/node": "^10.9.0",
-    "@types/react": "^16.4.11",
+    "@types/jest": "^23.3.2",
+    "@types/memory-fs": "^0.3.2",
+    "@types/node": "^10.10.1",
+    "@types/react": "^16.4.14",
     "@types/storybook__addon-actions": "^3.0.3",
-    "@types/storybook__addon-info": "^3.2.3",
+    "@types/storybook__addon-info": "^3.4.2",
     "@types/storybook__react": "^3.0.8",
-    "@types/webpack": "^4.4.11",
+    "@types/webpack": "^4.4.12",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
+    "lerna": "^3.4.0",
+    "prettier": "^1.14.3",
     "react-docgen-typescript-loader": "^2.0.3",
     "rimraf": "^2.6.2",
-    "ts-loader": "^4.4.2",
-    "typescript": "^3.0.1"
+    "ts-loader": "^5.1.1",
+    "tslint-config-airbnb": "^5.11.0",
+    "tslint-plugin-prettier": "^2.0.0",
+    "typescript": "^3.0.3"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
