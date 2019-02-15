@@ -20,7 +20,7 @@ Webpack loader to generate docgen information from TypeScript React components. 
 <p align="center">
   <img src="./example.png" alt="Example screenshot of Storybook with TypeScript props">
   <br>
-  <a href="./packages/react-docgen-typescript-loader-example">Example Storybook project</a>
+  <a href="./examples/storybook">Example Storybook project</a>
   <br>
   <a href="https://react-docgen-typescript-loader.netlify.com">Live Storybook</a>
 </p>
