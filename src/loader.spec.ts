@@ -27,11 +27,14 @@ it("marks the loader as being cacheable", () => {
 // Execute loader with its "this" set to an instance of LoaderContext.
 function executeLoaderWithBoundContext() {
   loader.call(
-    {
+    ({
       async: mockLoaderContextAsyncCallback,
       cacheable: mockLoaderContextCacheable,
       resourcePath: mockLoaderContextResourcePath(),
-    } as Partial<webpack.loader.LoaderContext>,
+    } as Pick<
+      webpack.loader.LoaderContext,
+      "async" | "cacheable" | "resourcePath"
+    >) as webpack.loader.LoaderContext,
     "// Original Source Code",
   );
 }

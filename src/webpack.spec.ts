@@ -1,7 +1,8 @@
 import fs from "fs";
 import path from "path";
 import webpack from "webpack";
-import MemoryFS = require("memory-fs");
+// import MemoryFS = require("memory-fs");
+import MemoryFS from "memory-fs";
 
 describe("all component fixtures compile successfully", () => {
   const fixtureFilenames = fs

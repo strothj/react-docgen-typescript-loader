@@ -34,31 +34,33 @@
   },
   "dependencies": {
     "@webpack-contrib/schema-utils": "^1.0.0-beta.0",
-    "loader-utils": "^1.1.0",
-    "react-docgen-typescript": "^1.9.0"
+    "loader-utils": "^1.2.3",
+    "react-docgen-typescript": "^1.12.3"
   },
   "peerDependencies": {
     "typescript": "*"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.2",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/jest": "^24.0.5",
     "@types/memory-fs": "^0.3.2",
-    "@types/node": "^10.10.1",
+    "@types/node": "^11.9.4",
     "@types/react": "^16.4.14",
     "@types/webpack": "^4.4.12",
-    "jest": "^23.6.0",
+    "jest": "^24.1.0",
     "memory-fs": "^0.4.1",
     "pre-commit": "^1.2.2",
     "prettier": "^1.14.3",
-    "react": "^16.5.2",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^23.10.1",
-    "ts-loader": "^5.1.1",
+    "react": "^16.8.2",
+    "rimraf": "^2.6.3",
+    "ts-loader": "^5.3.3",
     "tslint": "^5.10.0",
     "tslint-config-airbnb": "^5.11.0",
     "tslint-config-prettier": "^1.13.0",
     "tslint-plugin-prettier": "^2.0.0",
-    "typescript": "^3.0.3",
-    "webpack": "^4.19.1"
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.4"
   }
 }
