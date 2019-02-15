@@ -11,6 +11,5 @@ test_script:
   - yarn lint
   - yarn test
   - yarn build
-  - yarn build-storybook
 
 build: off

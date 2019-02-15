@@ -172,9 +172,9 @@ function createPropDefinition(propName: string, prop: PropItem) {
       // Use a more extensive check on defaultValue. Sometimes the parser
       // returns an empty object.
       defaultValue != null &&
-      typeof defaultValue === "object" &&
-      "value" in defaultValue &&
-      typeof defaultValue.value === "string"
+        typeof defaultValue === "object" &&
+        "value" in defaultValue &&
+        typeof defaultValue.value === "string"
         ? ts.createObjectLiteral([
             ts.createPropertyAssignment(
               ts.createIdentifier("value"),

@@ -1,9 +1,9 @@
 import validateOptions from "./validateOptions";
 
 it("throws error on unexpected field", () => {
-  expect(() =>
-    validateOptions({ invalidField: "fail" } as any),
-  ).toThrowErrorMatchingSnapshot();
+  expect(() => validateOptions({ invalidField: "fail" } as any)).toThrowError(
+    /invalidField.*invalid additional property/,
+  );
 });
 
 it("does not throw on empty", () => {
@@ -12,17 +12,17 @@ it("does not throw on empty", () => {
 
 describe("skipPropsWithName", () => {
   it("rejects empty string", () => {
-    expect(() =>
-      validateOptions({ skipPropsWithName: "" }),
-    ).toThrowErrorMatchingSnapshot();
+    expect(() => validateOptions({ skipPropsWithName: "" })).toThrowError(
+      /skipPropsWithName.*should NOT be shorter than 1 characters/,
+    );
 
     expect(() => validateOptions({ skipPropsWithName: "prop" })).not.toThrow();
   });
 
   it("rejects empty array", () => {
-    expect(() =>
-      validateOptions({ skipPropsWithName: [] }),
-    ).toThrowErrorMatchingSnapshot();
+    expect(() => validateOptions({ skipPropsWithName: [] })).toThrowError(
+      /skipPropsWithName.*should NOT have less than 1 items/,
+    );
 
     expect(() =>
       validateOptions({ skipPropsWithName: ["prop"] }),
@@ -59,6 +59,6 @@ describe("v2 includes/excludes fields", () => {
       validateOptions({
         includes: ["*\\.stories\\.tsx$"],
       } as any),
-    ).toThrowErrorMatchingSnapshot();
+    ).toThrowError(/includes.*is an invalid additional property/);
   });
 });

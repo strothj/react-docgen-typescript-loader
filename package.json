@@ -1,26 +1,44 @@
 {
-  "private": true,
-  "workspaces": [
-    "packages/*"
+  "name": "react-docgen-typescript-loader",
+  "version": "3.0.1",
+  "description": "Webpack loader to generate docgen information from TypeScript React components.",
+  "keywords": [
+    "storybook",
+    "react",
+    "docgen",
+    "typescript",
+    "webpack",
+    "loader"
   ],
-  "engines": {
-    "node": ">= 8.10",
-    "yarn": ">= 1.5.1"
-  },
+  "homepage": "https://github.com/strothj/react-docgen-typescript-loader",
+  "bugs": "https://github.com/strothj/react-docgen-typescript-loader/issues",
+  "repository": "https://github.com/strothj/react-docgen-typescript-loader.git",
+  "author": "strothj (https://github.com/strothj)",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "files": [
+    "dist/*"
+  ],
   "precommit": [
     "lint",
     "test",
     "clean",
-    "build",
-    "build-storybook"
+    "build"
   ],
   "scripts": {
-    "build": "lerna run build",
-    "clean": "lerna run clean",
-    "test": "lerna run --stream --concurrency 1 test",
-    "lint": "tslint -p ./",
-    "storybook": "lerna run --parallel storybook",
-    "build-storybook": "lerna run --parallel build-storybook"
+    "start": "tsc -p ./tsconfig.build.json -w",
+    "build": "tsc -p ./tsconfig.build.json",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "lint": "tslint -p ./"
+  },
+  "dependencies": {
+    "@webpack-contrib/schema-utils": "^1.0.0-beta.0",
+    "loader-utils": "^1.1.0",
+    "react-docgen-typescript": "^1.9.0"
+  },
+  "peerDependencies": {
+    "typescript": "*"
   },
   "devDependencies": {
     "@types/jest": "^23.3.2",
@@ -28,13 +46,19 @@
     "@types/node": "^10.10.1",
     "@types/react": "^16.4.14",
     "@types/webpack": "^4.4.12",
-    "lerna": "^3.4.0",
+    "jest": "^23.6.0",
+    "memory-fs": "^0.4.1",
     "pre-commit": "^1.2.2",
     "prettier": "^1.14.3",
+    "react": "^16.5.2",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^23.10.1",
+    "ts-loader": "^5.1.1",
     "tslint": "^5.10.0",
     "tslint-config-airbnb": "^5.11.0",
     "tslint-config-prettier": "^1.13.0",
     "tslint-plugin-prettier": "^2.0.0",
-    "typescript": "^3.0.3"
+    "typescript": "^3.0.3",
+    "webpack": "^4.19.1"
   }
 }

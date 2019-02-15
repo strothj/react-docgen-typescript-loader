@@ -68,7 +68,14 @@ function createWebpackConfig(filename: string): webpack.Configuration {
         {
           test: /\.tsx?$/,
           use: [
-            "ts-loader",
+            {
+              loader: "ts-loader",
+              options: {
+                compilerOptions: {
+                  noEmit: false,
+                },
+              },
+            },
             {
               loader: path.resolve(__dirname, "./loader"),
             },
