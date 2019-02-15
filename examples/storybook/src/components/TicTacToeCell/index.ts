@@ -1,1 +1,1 @@
-export { TicTacToeCell as default } from "./TicTacToeCell";
+export { TicTacToeCell as default, TicTacToeCellProps } from "./TicTacToeCell";

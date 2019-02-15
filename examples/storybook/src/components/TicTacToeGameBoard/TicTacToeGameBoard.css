@@ -1,10 +1,10 @@
-.container {
+.ttt-game-board {
   position: relative;
   padding-bottom: 100%;
   background-color: rgb(72, 78, 104);
 }
 
-.innerContainer {
+.ttt-game-board__content {
   display: flex;
   flex-wrap: wrap;
   position: absolute;
@@ -13,17 +13,17 @@
   padding: 8px;
 }
 
-.cell {
+.ttt-game-board__cell {
   width: calc(100% / 3);
   padding: 8px;
   border: 2px transparent;
 }
 
-.cell:nth-child(3n - 2),
-.cell:nth-child(3n - 1) {
-  border-right-color: #FFC153;
+.ttt-game-board__cell:nth-child(3n - 2),
+.ttt-game-board__cell:nth-child(3n - 1) {
+  border-right-color: #ffc153;
 }
 
-.cell:nth-child(-n + 6) {
-  border-bottom-color: #FFC153;
+.ttt-game-board__cell:nth-child(-n + 6) {
+  border-bottom-color: #ffc153;
 }

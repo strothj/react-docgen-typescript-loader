@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import * as styles from "./TicTacToeCell.css";
+import "./TicTacToeCell.css";
 
-interface Props {
+export interface TicTacToeCellProps {
   /**
    * Value to display, either empty (" ") or "X" / "O".
    *
@@ -20,7 +20,7 @@ interface Props {
  * TicTacToe game cell. Displays a clickable button when the value is " ",
  * otherwise displays "X" or "O".
  */
-export class TicTacToeCell extends Component<Props> {
+export class TicTacToeCell extends Component<TicTacToeCellProps> {
   handleClick = () => {
     const {
       position: { x, y },
@@ -34,7 +34,7 @@ export class TicTacToeCell extends Component<Props> {
   render() {
     const { value = " " } = this.props;
     const disabled = value !== " ";
-    const classes = `${styles.button} ${disabled ? styles.disabled : ""}`;
+    const classes = `ttt-cell ${disabled ? "ttt-cell--hidden" : ""}`;
 
     return (
       <button

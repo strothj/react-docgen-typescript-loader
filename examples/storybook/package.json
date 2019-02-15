@@ -4,29 +4,27 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },
-  "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "clean": "rimraf storybook-static"
-  },
   "devDependencies": {
-    "@storybook/addon-actions": "4.0.0-alpha.2",
-    "@storybook/addon-info": "4.0.0-alpha.2",
-    "@storybook/addon-links": "4.0.0-alpha.2",
-    "@storybook/addons": "4.0.0-alpha.2",
-    "@storybook/react": "4.0.0-alpha.2",
+    "@babel/core": "^7.2.2",
+    "@storybook/addon-actions": "4.1.11",
+    "@storybook/addon-info": "4.1.11",
+    "@storybook/addon-links": "4.1.11",
+    "@storybook/addons": "4.1.11",
+    "@storybook/react": "4.1.11",
     "@types/react": "^16.4.14",
     "@types/storybook__addon-actions": "^3.0.3",
     "@types/storybook__addon-info": "^3.4.2",
-    "@types/storybook__react": "^3.0.8",
-    "babel-core": "^6.26.3",
-    "babel-runtime": "^6.26.0",
-    "react-docgen-typescript-loader": "^2.0.3",
-    "rimraf": "^2.6.2",
+    "@types/storybook__react": "^4.0.1",
+    "babel-loader": "^8.0.5",
+    "react-docgen-typescript-loader": "^3.0.1",
     "ts-loader": "^5.1.1",
     "typescript": "^3.0.3"
   }

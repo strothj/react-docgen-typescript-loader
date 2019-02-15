@@ -1,5 +1,5 @@
-import React, { ReactElement, SFC } from "react";
-import * as styles from "./TicTacToeGameBoard.css";
+import React, { ReactElement, FC } from "react";
+import "./TicTacToeGameBoard.css";
 
 interface Props {
   /**
@@ -10,7 +10,7 @@ interface Props {
   /**
    * Line style to use when dividing game cells.
    *
-   * @default solid
+   * @default "solid"
    */
   lineStyle?: "solid" | "dashed";
 }
@@ -20,16 +20,16 @@ interface Props {
  * It requires that 9 elements be provided. The game board maintains a 1:1 size
  * ratio.
  */
-export const TicTacToeGameBoard: SFC<Props> = props => {
+export const TicTacToeGameBoard: FC<Props> = props => {
   const { cells, lineStyle = "solid", ...rest } = props;
 
   return (
-    <div className={styles.container} {...rest}>
-      <div className={styles.innerContainer}>
+    <div className="ttt-game-board" {...rest}>
+      <div className="ttt-game-board__content">
         {cells.map((cell, index) => (
           <div
             key={index}
-            className={styles.cell}
+            className="ttt-game-board__cell"
             style={{ borderStyle: lineStyle }}
           >
             {cell}

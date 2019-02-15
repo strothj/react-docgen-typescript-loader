@@ -6,27 +6,27 @@ import { TicTacToeCell } from "./TicTacToeCell";
 
 const stories = storiesOf("Components", module);
 
-stories.add(
-  "TicTacToeCell",
-  withInfo({ inline: true })(() => (
-    <div style={styles.container}>
-      <div style={styles.firstCellContainer}>
-        <TicTacToeCell
-          value="X"
-          position={{ x: 0, y: 0 }}
-          onClick={action("onClick")}
-        />
-      </div>
-      <div style={styles.cellContainer}>
-        <TicTacToeCell
-          value=" "
-          position={{ x: 0, y: 1 }}
-          onClick={action("onClick")}
-        />
-      </div>
+stories.addDecorator(withInfo);
+stories.addParameters({ info: { inline: true } });
+
+stories.add("TicTacToeCell", () => (
+  <div style={styles.container}>
+    <div style={styles.firstCellContainer}>
+      <TicTacToeCell
+        value="X"
+        position={{ x: 0, y: 0 }}
+        onClick={action("onClick")}
+      />
     </div>
-  )),
-);
+    <div style={styles.cellContainer}>
+      <TicTacToeCell
+        value=" "
+        position={{ x: 0, y: 1 }}
+        onClick={action("onClick")}
+      />
+    </div>
+  </div>
+));
 
 const styles: { [key: string]: CSSProperties } = {
   container: {
