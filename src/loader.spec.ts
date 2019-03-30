@@ -8,13 +8,18 @@ import loader from "./loader";
 const mockLoaderContextAsyncCallback = jest.fn();
 const mockLoaderContextCacheable = jest.fn();
 const mockLoaderContextResourcePath = jest.fn();
+const mockLoaderContextContext = jest.fn();
 
 beforeEach(() => {
   mockLoaderContextAsyncCallback.mockReset();
   mockLoaderContextCacheable.mockReset();
   mockLoaderContextResourcePath.mockReset();
+  mockLoaderContextContext.mockReset();
   mockLoaderContextResourcePath.mockImplementation(() =>
     path.resolve(__dirname, "./__fixtures__/components/Simple.tsx"),
+  );
+  mockLoaderContextContext.mockImplementation(() =>
+    path.resolve(__dirname, "./__fixtures__/"),
   );
 });
 
@@ -31,9 +36,10 @@ function executeLoaderWithBoundContext() {
       async: mockLoaderContextAsyncCallback,
       cacheable: mockLoaderContextCacheable,
       resourcePath: mockLoaderContextResourcePath(),
+      context: mockLoaderContextContext(),
     } as Pick<
       webpack.loader.LoaderContext,
-      "async" | "cacheable" | "resourcePath"
+      "async" | "cacheable" | "resourcePath" | "context"
     >) as webpack.loader.LoaderContext,
     "// Original Source Code",
   );
