@@ -176,7 +176,7 @@ function createServiceHost(
 ): ts.LanguageServiceHost {
   return {
     getScriptFileNames: () => {
-      return [...Array.from(files.keys())];
+      return [...files.keys()];
     },
     getScriptVersion: fileName => {
       const file = files.get(fileName);
