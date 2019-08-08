@@ -160,13 +160,22 @@ function getDefaultTSConfigFile(basePath: string): ts.ParsedCommandLine {
 }
 
 function loadFiles(filesToLoad: string[]): void {
-  let normalizedFilePath: string;
   filesToLoad.forEach(filePath => {
-    normalizedFilePath = path.normalize(filePath);
-    files.set(normalizedFilePath, {
-      text: fs.readFileSync(normalizedFilePath, "utf-8"),
-      version: 0,
-    });
+    const normalizedFilePath = path.normalize(filePath);
+    const file = files.get(normalizedFilePath);
+    const text = fs.readFileSync(normalizedFilePath, "utf-8");
+
+    if (!file) {
+      files.set(normalizedFilePath, {
+        text,
+        version: 0,
+      });
+    } else if (file.text !== text) {
+      files.set(normalizedFilePath, {
+        text,
+        version: file.version + 1,
+      });
+    }
   });
 }
 
