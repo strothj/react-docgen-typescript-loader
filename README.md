@@ -53,6 +53,13 @@ Webpack loader to generate docgen information from TypeScript React components. 
 
 ## Changelog
 
+### [3.1.1] - 2019-08-09
+
+#### Fix
+
+- Fixed stories are not updated on reload. Thanks @nekitk.
+https://github.com/strothj/react-docgen-typescript-loader/issues/43
+
 ### [3.1.0] - 2019-04-02
 
 - Increased performance by reusing TypeScript program instance. Thanks @denieler (https://github.com/strothj/react-docgen-typescript-loader/pull/40)
