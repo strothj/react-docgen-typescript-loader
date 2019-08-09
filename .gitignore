@@ -1,5 +1,6 @@
 node_modules/
 .vscode/
+.idea/
 .rpt2_cache/
 dist/
 *error.log
