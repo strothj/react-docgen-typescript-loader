@@ -209,3 +209,32 @@ try {
 }
 catch (__react_docgen_typescript_loader_error) { }"
 `;
+
+exports[`generates value info for enums 1`] = `
+"import * as React from \\"react\\";
+
+interface DefaultPropValueComponentProps {
+  /**
+   * Button color.
+   *
+   * @default blue
+   **/
+  color: \\"blue\\" | \\"green\\";
+}
+
+/**
+ * Component with a prop with a default value.
+ */
+export const DefaultPropValueComponent: React.SFC<
+  DefaultPropValueComponentProps
+> = props => (
+  <button style={{ backgroundColor: props.color }}>{props.children}</button>
+);
+try {
+    // @ts-ignore
+    DefaultPropValueComponent.displayName = \\"DefaultPropValueComponent\\";
+    // @ts-ignore
+    DefaultPropValueComponent.__docgenInfo = { \\"description\\": \\"Component with a prop with a default value.\\", \\"displayName\\": \\"DefaultPropValueComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": { value: \\"blue\\" }, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"enum\\", \\"value\\": [{ \\"value\\": \\"\\\\\\"blue\\\\\\"\\" }, { \\"value\\": \\"\\\\\\"green\\\\\\"\\" }] } } } };
+}
+catch (__react_docgen_typescript_loader_error) { }"
+`;
