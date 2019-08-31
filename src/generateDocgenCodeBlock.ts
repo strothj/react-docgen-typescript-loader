@@ -222,15 +222,48 @@ function createPropDefinition(propName: string, prop: PropItem) {
 
   /**
    * ```
+   * SimpleComponent.__docgenInfo.props.someProp.type = {
+   *  name: "enum",
+   *  value: [ { value: "\"blue\"" }, { value: "\"green\""} ]
+   * }
+   * ```
+   * @param [typeValue] Prop value (for enums)
+   */
+  const setValue = (typeValue?: any) =>
+    Array.isArray(typeValue) &&
+    typeValue.every(value => typeof value.value === "string")
+      ? ts.createPropertyAssignment(
+          ts.createLiteral("value"),
+          ts.createArrayLiteral(
+            typeValue.map(value =>
+              ts.createObjectLiteral([
+                setStringLiteralField("value", value.value),
+              ]),
+            ),
+          ),
+        )
+      : undefined;
+
+  /**
+   * ```
    * SimpleComponent.__docgenInfo.props.someProp.type = { name: "'blue' | 'green'"}
    * ```
    * @param typeName Prop type name.
+   * @param [typeValue] Prop value (for enums)
    */
-  const setType = (typeName: string) =>
-    ts.createPropertyAssignment(
+  const setType = (typeName: string, typeValue?: any) => {
+    const objectFields = [setStringLiteralField("name", typeName)];
+    const valueField = setValue(typeValue);
+
+    if (valueField) {
+      objectFields.push(valueField);
+    }
+
+    return ts.createPropertyAssignment(
       ts.createLiteral("type"),
-      ts.createObjectLiteral([setStringLiteralField("name", typeName)]),
+      ts.createObjectLiteral(objectFields),
     );
+  };
 
   return ts.createPropertyAssignment(
     ts.createLiteral(propName),
@@ -239,7 +272,7 @@ function createPropDefinition(propName: string, prop: PropItem) {
       setDescription(prop.description),
       setName(prop.name),
       setRequired(prop.required),
-      setType(prop.type.name),
+      setType(prop.type.name, prop.type.value),
     ]),
   );
 }

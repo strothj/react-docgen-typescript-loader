@@ -44,6 +44,10 @@ const schema = {
     setDisplayName: {
       type: "boolean",
     },
+
+    shouldExtractLiteralValuesFromEnum: {
+      type: "boolean",
+    },
   },
 };
 
