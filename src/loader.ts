@@ -78,6 +78,8 @@ function processResource(
             skipPropsWithoutDoc: options.skipPropsWithoutDoc || undefined,
           }
         : options.propFilter,
+    shouldExtractLiteralValuesFromEnum:
+      options.shouldExtractLiteralValuesFromEnum,
   };
 
   // Configure parser using settings provided to loader.

@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { parse } from "react-docgen-typescript/lib/parser.js";
+import { parse, ParserOptions } from "react-docgen-typescript/lib/parser.js";
 import generateDocgenCodeBlock, {
   GeneratorOptions,
 } from "./generateDocgenCodeBlock";
@@ -25,22 +25,36 @@ it("adds component to docgen collection", () => {
   ).toMatchSnapshot();
 });
 
+function getGeneratorOptions(parserOptions: ParserOptions = {}) {
+  return (filename: string) => {
+    const filePath = path.resolve(
+      __dirname,
+      "__fixtures__/components",
+      filename,
+    );
+
+    return {
+      filename,
+      source: fs.readFileSync(filePath, "utf8"),
+      componentDocs: parse(filePath, parserOptions),
+      docgenCollectionName: null,
+      setDisplayName: true,
+    } as GeneratorOptions;
+  };
+}
+
 function loadFixtureTests(): GeneratorOptions[] {
   return fs
     .readdirSync(path.resolve(__dirname, "__fixtures__/components"))
-    .map(filename => {
-      const filePath = path.resolve(
-        __dirname,
-        "__fixtures__/components",
-        filename,
-      );
-
-      return {
-        filename,
-        source: fs.readFileSync(filePath, "utf8"),
-        componentDocs: parse(filePath),
-        docgenCollectionName: null,
-        setDisplayName: true,
-      } as GeneratorOptions;
-    });
+    .map(getGeneratorOptions());
 }
+
+it("generates value info for enums", () => {
+  expect(
+    generateDocgenCodeBlock(
+      getGeneratorOptions({ shouldExtractLiteralValuesFromEnum: true })(
+        "DefaultPropValue.tsx",
+      ),
+    ),
+  ).toMatchSnapshot();
+});
