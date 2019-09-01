@@ -53,12 +53,23 @@ Webpack loader to generate docgen information from TypeScript React components. 
 
 ## Changelog
 
+### [3.2.0] - 2019-09-01
+
+#### Added
+
+Thanks @nekitk: https://github.com/strothj/react-docgen-typescript-loader/pull/59
+
+- Default values for stateless components can now be generated from props destructuring.
+- Passing new parser option (shouldExtractLiteralValuesFromEnum) which allows to parse TypeScript enums and string unions to docgen enum of their values:
+  If false (like before): `type: { name: "\"blue\" | \"green\"" }` or `type: { name: "ColorEnum" }`
+  If true: type: `{ name: "enum", value: [ { value: "\"blue\"" }, { value: "\"green\""} ] }`
+
 ### [3.1.1] - 2019-08-09
 
 #### Fix
 
 - Fixed stories are not updated on reload. Thanks @nekitk.
-https://github.com/strothj/react-docgen-typescript-loader/issues/43
+  https://github.com/strothj/react-docgen-typescript-loader/issues/43
 
 ### [3.1.0] - 2019-04-02
 
@@ -309,16 +320,16 @@ stories.add(
 
 ## Loader Options
 
-| Option               | Type                       | Description                                                                                                                                                                                                                                                                                                                                                 |
-| -------------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| skipPropsWithName    | string[] or string         | Avoid including docgen information for the prop or props specified.                                                                                                                                                                                                                                                                                         |
-| skipPropsWithoutDoc  | boolean                    | Avoid including docgen information for props without documentation.                                                                                                                                                                                                                                                                                         |
-| propFilter           | function                   | Filter props using a function. If skipPropsWithName or skipPropsWithoutDoc is defined the function will not be used. Function accepts two arguments: object with information about prop and an object with information about component. Return true to include prop in documentation. https://github.com/styleguidist/react-docgen-typescript#parseroptions |
-| tsconfigPath         | string                     | Specify the location of the tsconfig.json to use. Can not be used with compilerOptions.                                                                                                                                                                                                                                                                     |
-| compilerOptions      | typescript.CompilerOptions | Specify TypeScript compiler options. Can not be used with tsconfigPath.                                                                                                                                                                                                                                                                                     |
-| docgenCollectionName | string or null             | Specify the docgen collection name to use. All docgen information will be collected into this global object. Set to `null` to disable. Defaults to `STORYBOOK_REACT_CLASSES` for use with the Storybook Info Addon. https://github.com/gongreg/react-storybook-addon-docgen                                                                                 |
-| setDisplayName       | boolean                    | Automatically set the components' display name. If you want to set display names yourself or are using another plugin to do this, you should disable this option. Defaults to `true`. This is used to preserve component display names during a production build of Storybook.                                                                              |
-| shouldExtractLiteralValuesFromEnum | boolean | If set to true, string enums and unions will be converted to docgen enum format. Useful if you use Storybook and want to generate knobs automatically using [addon-smart-knobs](https://github.com/storybookjs/addon-smart-knobs). https://github.com/styleguidist/react-docgen-typescript#parseroptions |
+| Option                             | Type                       | Description                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------------------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| skipPropsWithName                  | string[] or string         | Avoid including docgen information for the prop or props specified.                                                                                                                                                                                                                                                                                         |
+| skipPropsWithoutDoc                | boolean                    | Avoid including docgen information for props without documentation.                                                                                                                                                                                                                                                                                         |
+| propFilter                         | function                   | Filter props using a function. If skipPropsWithName or skipPropsWithoutDoc is defined the function will not be used. Function accepts two arguments: object with information about prop and an object with information about component. Return true to include prop in documentation. https://github.com/styleguidist/react-docgen-typescript#parseroptions |
+| tsconfigPath                       | string                     | Specify the location of the tsconfig.json to use. Can not be used with compilerOptions.                                                                                                                                                                                                                                                                     |
+| compilerOptions                    | typescript.CompilerOptions | Specify TypeScript compiler options. Can not be used with tsconfigPath.                                                                                                                                                                                                                                                                                     |
+| docgenCollectionName               | string or null             | Specify the docgen collection name to use. All docgen information will be collected into this global object. Set to `null` to disable. Defaults to `STORYBOOK_REACT_CLASSES` for use with the Storybook Info Addon. https://github.com/gongreg/react-storybook-addon-docgen                                                                                 |
+| setDisplayName                     | boolean                    | Automatically set the components' display name. If you want to set display names yourself or are using another plugin to do this, you should disable this option. Defaults to `true`. This is used to preserve component display names during a production build of Storybook.                                                                              |
+| shouldExtractLiteralValuesFromEnum | boolean                    | If set to true, string enums and unions will be converted to docgen enum format. Useful if you use Storybook and want to generate knobs automatically using [addon-smart-knobs](https://github.com/storybookjs/addon-smart-knobs). https://github.com/styleguidist/react-docgen-typescript#parseroptions                                                    |
 
 ## Performance
 
