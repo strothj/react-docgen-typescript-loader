@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.3.0] - 2019-09-30
+
+### Added
+
+Thanks @evless: https://github.com/strothj/react-docgen-typescript-loader/pull/64
+
+- Default values can be displayed as something other than just string types.
+
 ## [3.2.1] - 2019-09-17
 
 ### Changed
