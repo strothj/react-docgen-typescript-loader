@@ -7,6 +7,16 @@ interface DefaultPropValueComponentProps {
    * @default blue
    **/
   color: "blue" | "green";
+
+  /**
+   * Button counter.
+   */
+  counter: number;
+
+  /**
+   * Button disabled.
+   */
+  disabled: boolean;
 }
 
 /**
@@ -15,5 +25,13 @@ interface DefaultPropValueComponentProps {
 export const DefaultPropValueComponent: React.SFC<
   DefaultPropValueComponentProps
 > = props => (
-  <button style={{ backgroundColor: props.color }}>{props.children}</button>
+  <button disabled={props.disabled} style={{ backgroundColor: props.color }}>
+    {props.counter}
+    {props.children}
+  </button>
 );
+
+DefaultPropValueComponent.defaultProps = {
+  counter: 123,
+  disabled: false,
+};

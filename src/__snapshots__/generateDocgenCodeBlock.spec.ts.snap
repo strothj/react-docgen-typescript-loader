@@ -37,6 +37,16 @@ interface DefaultPropValueComponentProps {
    * @default blue
    **/
   color: \\"blue\\" | \\"green\\";
+
+  /**
+   * Button counter.
+   */
+  counter: number;
+
+  /**
+   * Button disabled.
+   */
+  disabled: boolean;
 }
 
 /**
@@ -45,13 +55,21 @@ interface DefaultPropValueComponentProps {
 export const DefaultPropValueComponent: React.SFC<
   DefaultPropValueComponentProps
 > = props => (
-  <button style={{ backgroundColor: props.color }}>{props.children}</button>
+  <button disabled={props.disabled} style={{ backgroundColor: props.color }}>
+    {props.counter}
+    {props.children}
+  </button>
 );
+
+DefaultPropValueComponent.defaultProps = {
+  counter: 123,
+  disabled: false,
+};
 try {
     // @ts-ignore
     DefaultPropValueComponent.displayName = \\"DefaultPropValueComponent\\";
     // @ts-ignore
-    DefaultPropValueComponent.__docgenInfo = { \\"description\\": \\"Component with a prop with a default value.\\", \\"displayName\\": \\"DefaultPropValueComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": { value: \\"blue\\" }, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } } } };
+    DefaultPropValueComponent.__docgenInfo = { \\"description\\": \\"Component with a prop with a default value.\\", \\"displayName\\": \\"DefaultPropValueComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": { value: \\"blue\\" }, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } }, \\"counter\\": { \\"defaultValue\\": { value: 123 }, \\"description\\": \\"Button counter.\\", \\"name\\": \\"counter\\", \\"required\\": false, \\"type\\": { \\"name\\": \\"number\\" } }, \\"disabled\\": { \\"defaultValue\\": { value: false }, \\"description\\": \\"Button disabled.\\", \\"name\\": \\"disabled\\", \\"required\\": false, \\"type\\": { \\"name\\": \\"boolean\\" } } } };
 }
 catch (__react_docgen_typescript_loader_error) { }"
 `;
@@ -220,6 +238,16 @@ interface DefaultPropValueComponentProps {
    * @default blue
    **/
   color: \\"blue\\" | \\"green\\";
+
+  /**
+   * Button counter.
+   */
+  counter: number;
+
+  /**
+   * Button disabled.
+   */
+  disabled: boolean;
 }
 
 /**
@@ -228,13 +256,21 @@ interface DefaultPropValueComponentProps {
 export const DefaultPropValueComponent: React.SFC<
   DefaultPropValueComponentProps
 > = props => (
-  <button style={{ backgroundColor: props.color }}>{props.children}</button>
+  <button disabled={props.disabled} style={{ backgroundColor: props.color }}>
+    {props.counter}
+    {props.children}
+  </button>
 );
+
+DefaultPropValueComponent.defaultProps = {
+  counter: 123,
+  disabled: false,
+};
 try {
     // @ts-ignore
     DefaultPropValueComponent.displayName = \\"DefaultPropValueComponent\\";
     // @ts-ignore
-    DefaultPropValueComponent.__docgenInfo = { \\"description\\": \\"Component with a prop with a default value.\\", \\"displayName\\": \\"DefaultPropValueComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": { value: \\"blue\\" }, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"enum\\", \\"value\\": [{ \\"value\\": \\"\\\\\\"blue\\\\\\"\\" }, { \\"value\\": \\"\\\\\\"green\\\\\\"\\" }] } } } };
+    DefaultPropValueComponent.__docgenInfo = { \\"description\\": \\"Component with a prop with a default value.\\", \\"displayName\\": \\"DefaultPropValueComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": { value: \\"blue\\" }, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"enum\\", \\"value\\": [{ \\"value\\": \\"\\\\\\"blue\\\\\\"\\" }, { \\"value\\": \\"\\\\\\"green\\\\\\"\\" }] } }, \\"counter\\": { \\"defaultValue\\": { value: 123 }, \\"description\\": \\"Button counter.\\", \\"name\\": \\"counter\\", \\"required\\": false, \\"type\\": { \\"name\\": \\"number\\" } }, \\"disabled\\": { \\"defaultValue\\": { value: false }, \\"description\\": \\"Button disabled.\\", \\"name\\": \\"disabled\\", \\"required\\": false, \\"type\\": { \\"name\\": \\"boolean\\" } } } };
 }
 catch (__react_docgen_typescript_loader_error) { }"
 `;

@@ -110,12 +110,18 @@ var React = __importStar(__webpack_require__(/*! react */ \\"react\\"));
 /**
  * Component with a prop with a default value.
  */
-exports.DefaultPropValueComponent = function (props) { return (React.createElement(\\"button\\", { style: { backgroundColor: props.color } }, props.children)); };
+exports.DefaultPropValueComponent = function (props) { return (React.createElement(\\"button\\", { disabled: props.disabled, style: { backgroundColor: props.color } },
+    props.counter,
+    props.children)); };
+exports.DefaultPropValueComponent.defaultProps = {
+    counter: 123,
+    disabled: false,
+};
 try {
     // @ts-ignore
     exports.DefaultPropValueComponent.displayName = \\"DefaultPropValueComponent\\";
     // @ts-ignore
-    exports.DefaultPropValueComponent.__docgenInfo = { \\"description\\": \\"Component with a prop with a default value.\\", \\"displayName\\": \\"DefaultPropValueComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": { value: \\"blue\\" }, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } } } };
+    exports.DefaultPropValueComponent.__docgenInfo = { \\"description\\": \\"Component with a prop with a default value.\\", \\"displayName\\": \\"DefaultPropValueComponent\\", \\"props\\": { \\"color\\": { \\"defaultValue\\": { value: \\"blue\\" }, \\"description\\": \\"Button color.\\", \\"name\\": \\"color\\", \\"required\\": true, \\"type\\": { \\"name\\": \\"\\\\\\"blue\\\\\\" | \\\\\\"green\\\\\\"\\" } }, \\"counter\\": { \\"defaultValue\\": { value: 123 }, \\"description\\": \\"Button counter.\\", \\"name\\": \\"counter\\", \\"required\\": false, \\"type\\": { \\"name\\": \\"number\\" } }, \\"disabled\\": { \\"defaultValue\\": { value: false }, \\"description\\": \\"Button disabled.\\", \\"name\\": \\"disabled\\", \\"required\\": false, \\"type\\": { \\"name\\": \\"boolean\\" } } } };
     // @ts-ignore
     if (typeof STORYBOOK_REACT_CLASSES !== \\"undefined\\")
         // @ts-ignore

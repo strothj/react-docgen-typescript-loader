@@ -166,7 +166,9 @@ function createPropDefinition(propName: string, prop: PropItem) {
    *
    * @param defaultValue Default prop value or null if not set.
    */
-  const setDefaultValue = (defaultValue: { value: string } | null) =>
+  const setDefaultValue = (
+    defaultValue: { value: string | number | boolean } | null,
+  ) =>
     ts.createPropertyAssignment(
       ts.createLiteral("defaultValue"),
       // Use a more extensive check on defaultValue. Sometimes the parser
@@ -174,7 +176,9 @@ function createPropDefinition(propName: string, prop: PropItem) {
       defaultValue != null &&
         typeof defaultValue === "object" &&
         "value" in defaultValue &&
-        typeof defaultValue.value === "string"
+        (typeof defaultValue.value === "string" ||
+          typeof defaultValue.value === "number" ||
+          typeof defaultValue.value === "boolean")
         ? ts.createObjectLiteral([
             ts.createPropertyAssignment(
               ts.createIdentifier("value"),
