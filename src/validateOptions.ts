@@ -48,6 +48,10 @@ const schema = {
     shouldExtractLiteralValuesFromEnum: {
       type: "boolean",
     },
+
+    typePropName: {
+      type: "string",
+    },
   },
 };
 

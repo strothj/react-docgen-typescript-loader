@@ -130,6 +130,8 @@ function processResource(
     },
   );
 
+  options.typePropName = options.typePropName || "type";
+
   // Return amended source code if there is docgen information available.
   if (componentDocs.length) {
     return generateDocgenCodeBlock({
@@ -138,6 +140,7 @@ function processResource(
       componentDocs,
       docgenCollectionName: options.docgenCollectionName,
       setDisplayName: options.setDisplayName,
+      typePropName: options.typePropName,
     });
   }
 
