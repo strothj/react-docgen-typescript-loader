@@ -39,6 +39,7 @@ function getGeneratorOptions(parserOptions: ParserOptions = {}) {
       componentDocs: parse(filePath, parserOptions),
       docgenCollectionName: null,
       setDisplayName: true,
+      typePropName: "type",
     } as GeneratorOptions;
   };
 }

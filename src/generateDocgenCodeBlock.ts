@@ -8,6 +8,7 @@ export interface GeneratorOptions {
   componentDocs: ComponentDoc[];
   docgenCollectionName: string | null;
   setDisplayName: boolean;
+  typePropName: string;
 }
 
 export default function generateDocgenCodeBlock(
@@ -38,7 +39,7 @@ export default function generateDocgenCodeBlock(
   const codeBlocks = options.componentDocs.map(d =>
     wrapInTryStatement([
       options.setDisplayName ? setDisplayName(d) : null,
-      setComponentDocGen(d),
+      setComponentDocGen(d, options),
       options.docgenCollectionName != null
         ? insertDocgenIntoGlobalCollection(
             d,
@@ -101,8 +102,12 @@ function setDisplayName(d: ComponentDoc): ts.Statement {
  * ```
  *
  * @param d Component doc.
+ * @param options Generator options.
  */
-function setComponentDocGen(d: ComponentDoc): ts.Statement {
+function setComponentDocGen(
+  d: ComponentDoc,
+  options: GeneratorOptions,
+): ts.Statement {
   return insertTsIgnoreBeforeStatement(
     ts.createStatement(
       ts.createBinary(
@@ -128,7 +133,7 @@ function setComponentDocGen(d: ComponentDoc): ts.Statement {
             ts.createLiteral("props"),
             ts.createObjectLiteral(
               Object.entries(d.props).map(([propName, prop]) =>
-                createPropDefinition(propName, prop),
+                createPropDefinition(propName, prop, options),
               ),
             ),
           ),
@@ -152,8 +157,13 @@ function setComponentDocGen(d: ComponentDoc): ts.Statement {
  *
  * @param propName Prop name
  * @param prop Prop definition from `ComponentDoc.props`
+ * @param options Generator options.
  */
-function createPropDefinition(propName: string, prop: PropItem) {
+function createPropDefinition(
+  propName: string,
+  prop: PropItem,
+  options: GeneratorOptions,
+) {
   /**
    * Set default prop value.
    *
@@ -264,7 +274,7 @@ function createPropDefinition(propName: string, prop: PropItem) {
     }
 
     return ts.createPropertyAssignment(
-      ts.createLiteral("type"),
+      ts.createLiteral(options.typePropName),
       ts.createObjectLiteral(objectFields),
     );
   };

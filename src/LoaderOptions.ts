@@ -54,4 +54,11 @@ export default interface LoaderOptions {
    * @see https://github.com/styleguidist/react-docgen-typescript#parseroptions
    * */
   shouldExtractLiteralValuesFromEnum?: boolean;
+
+  /**
+   * Specifiy the name of the property for docgen info prop type.
+   *
+   * @default "type"
+   */
+  typePropName?: string;
 }
