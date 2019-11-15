@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.4.0] - 2019-11-15
+
+### Added
+
+Thanks @patricklafrance: https://github.com/strothj/react-docgen-typescript-loader/pull/69
+
+- Make the name of the `type` property attached to generated docs configurable.
+
 ## [3.3.0] - 2019-09-30
 
 ### Added
