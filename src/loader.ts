@@ -71,6 +71,7 @@ function processResource(
   // react-docgen-typescript.
   // See: node_modules/react-docgen-typescript/lib/parser.d.ts
   const parserOptions: ParserOptions = {
+    componentNameResolver: options.componentNameResolver,
     propFilter:
       options.skipPropsWithName || options.skipPropsWithoutDoc
         ? {

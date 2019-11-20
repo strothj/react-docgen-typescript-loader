@@ -16,6 +16,18 @@ const schema = {
       type: "boolean",
     },
 
+    componentNameResolver: {
+      // this is really { type: "function" }
+      not: {
+        oneOf: [
+          { type: "string" },
+          { type: "number" },
+          { type: "object" },
+          { type: "array" },
+        ],
+      },
+    },
+
     propFilter: {
       // this is really { type: "function" }
       not: {
