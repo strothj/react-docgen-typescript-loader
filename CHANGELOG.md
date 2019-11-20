@@ -1,5 +1,14 @@
 # Changelog
 
+## [3.5.0] - 2019-11-20
+
+### Added
+
+Thanks @folz: https://github.com/strothj/react-docgen-typescript-loader/pull/72
+
+- Expose the `componentNameResolver` parser option. This allows override the
+name resolution for components.
+
 ## [3.4.0] - 2019-11-15
 
 ### Added
