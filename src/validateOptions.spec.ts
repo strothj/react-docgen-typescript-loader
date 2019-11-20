@@ -30,6 +30,16 @@ describe("skipPropsWithName", () => {
   });
 });
 
+describe("component name resolver", () => {
+  it("accepts function", () => {
+    expect(() =>
+      validateOptions({
+        componentNameResolver: () => "",
+      } as any),
+    ).not.toThrow();
+  });
+});
+
 describe("prop filter", () => {
   it("accepts function", () => {
     expect(() =>

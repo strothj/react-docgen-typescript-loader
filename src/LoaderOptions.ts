@@ -1,5 +1,8 @@
 import { CompilerOptions } from "typescript";
-import { PropFilter } from "react-docgen-typescript/lib/parser.js";
+import {
+  ComponentNameResolver,
+  PropFilter,
+} from "react-docgen-typescript/lib/parser.js";
 
 export default interface LoaderOptions {
   /** Avoid including docgen information for the prop or props specified. */
@@ -9,10 +12,16 @@ export default interface LoaderOptions {
   skipPropsWithoutDoc?: boolean;
 
   /**
+   * If a string is returned, then the component will use that name. Else it will fallback to the default logic of parser.
+   */
+  componentNameResolver?: ComponentNameResolver;
+
+  /**
    * Specify function to filter props.
    * If either skipPropsWithName or skipPropsWithoutDoc will be specified this will not be used.
    */
   propFilter?: PropFilter;
+
   /**
    * Specify the location of the tsconfig.json to use. Can not be used with
    * compilerOptions.
