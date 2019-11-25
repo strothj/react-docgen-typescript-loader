@@ -49,6 +49,10 @@ const schema = {
       type: "boolean",
     },
 
+    savePropValueAsString: {
+      type: "boolean",
+    },
+
     typePropName: {
       type: "string",
     },
