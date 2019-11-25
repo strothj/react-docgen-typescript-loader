@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.6.0] - 2019-11-24
+
+### Added
+
+Thanks @patricklafrance: https://github.com/strothj/react-docgen-typescript-loader/pull/73
+
+- Expose the `savePropAsValueString` parser option. If set to true, defaultValue to props will be string. https://github.com/styleguidist/react-docgen-typescript#parseroptions
+
 ## [3.5.0] - 2019-11-20
 
 ### Added

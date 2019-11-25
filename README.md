@@ -255,7 +255,7 @@ stories.add(
 | setDisplayName                     | boolean                    | Automatically set the components' display name. If you want to set display names yourself or are using another plugin to do this, you should disable this option. Defaults to `true`. This is used to preserve component display names during a production build of Storybook.                                                                              |
 | shouldExtractLiteralValuesFromEnum | boolean                    | If set to true, string enums and unions will be converted to docgen enum format. Useful if you use Storybook and want to generate knobs automatically using [addon-smart-knobs](https://github.com/storybookjs/addon-smart-knobs). https://github.com/styleguidist/react-docgen-typescript#parseroptions      
 | savePropValueAsString | boolean                    | If set to true, defaultValue to props will be string. https://github.com/styleguidist/react-docgen-typescript#parseroptions                                                |
-| typePropName | string                    | Specifiy the name of the property for docgen info prop type.                                                   |
+| typePropName | string                    | Specify the name of the property for docgen info prop type.                                                   |
 
 ## Performance
 
