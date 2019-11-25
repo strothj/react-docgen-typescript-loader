@@ -65,6 +65,12 @@ export default interface LoaderOptions {
   shouldExtractLiteralValuesFromEnum?: boolean;
 
   /**
+   * If set to true, defaultValue to props will be string.
+   * @see https://github.com/styleguidist/react-docgen-typescript#parseroptions
+   * */
+  savePropValueAsString?: boolean;
+
+  /**
    * Specifiy the name of the property for docgen info prop type.
    *
    * @default "type"
