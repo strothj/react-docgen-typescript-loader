@@ -6,9 +6,15 @@ module.exports = ({ config }) => {
     include: path.resolve(__dirname, "../src"),
     use: [
       require.resolve("ts-loader"),
-
-      // require.resolve("react-docgen-typescript-loader"),
-      require.resolve("../../.."),
+      {
+        // loader: require.resolve("react-docgen-typescript-loader"),
+        loader: require.resolve("../../.."),
+        options: {
+          // Provide the path to your tsconfig.json so that your stories can
+          // display types from outside each individual story.
+          tsconfigPath: path.resolve(__dirname, "../tsconfig.json"),
+        },
+      },
     ],
   });
 
