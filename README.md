@@ -105,7 +105,7 @@ module.exports = (baseConfig, env, config) => {
         options: {
           // Provide the path to your tsconfig.json so that your stories can
           // display types from outside each individual story.
-          tsconfigPath: path.resolve(__dirname, "../tsconfig.json),
+          tsconfigPath: path.resolve(__dirname, "../tsconfig.json"),
         },
       },
     ],
@@ -136,7 +136,7 @@ module.exports = (baseConfig, env) => {
         options: {
           // Provide the path to your tsconfig.json so that your stories can
           // display types from outside each individual story.
-          tsconfigPath: path.resolve(__dirname, "../tsconfig.json),
+          tsconfigPath: path.resolve(__dirname, "../tsconfig.json"),
         },
       },
     ],
