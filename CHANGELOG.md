@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.7.0] - 2020-03-07
+
+### Added
+
+Thanks @DSil: https://github.com/strothj/babel-plugin-react-docgen-typescript/pull/4
+
+- Expose the `shouldExtractLiteralValuesFromEnum` parser option. If set to true, string enums and unions will be converted to docgen enum format.
+
 ## [3.6.0] - 2019-11-24
 
 ### Added
@@ -15,7 +23,7 @@ Thanks @patricklafrance: https://github.com/strothj/react-docgen-typescript-load
 Thanks @folz: https://github.com/strothj/react-docgen-typescript-loader/pull/72
 
 - Expose the `componentNameResolver` parser option. This allows override the
-name resolution for components.
+  name resolution for components.
 
 ## [3.4.0] - 2019-11-15
 
