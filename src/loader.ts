@@ -58,7 +58,7 @@ function processResource(
   // deterministic.
   context.cacheable(true);
 
-  const options: LoaderOptions = getOptions(context) || {};
+  const options: LoaderOptions = Object.assign({}, getOptions(context));
   validateOptions(options);
 
   options.docgenCollectionName =
