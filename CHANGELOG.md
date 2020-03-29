@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.7.2] - 2020-03-29
+
+- Don't mutate options object. Thanks @adammockor: https://github.com/strothj/react-docgen-typescript-loader/pull/92
+
 ## [3.7.1] - 2020-03-09
 
 ### Fixed
