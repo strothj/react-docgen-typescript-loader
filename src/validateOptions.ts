@@ -68,6 +68,10 @@ const schema = {
     typePropName: {
       type: "string",
     },
+
+    shouldRemoveUndefinedFromOptional: {
+      type: "boolean",
+    },
   },
 };
 
