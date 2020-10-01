@@ -76,4 +76,11 @@ export default interface LoaderOptions {
    * @default "type"
    */
   typePropName?: string;
+
+  /**
+   * If set to true, types that are optional will not display " | undefined" in the type.
+   *
+   * @default false
+   */
+  shouldRemoveUndefinedFromOptional?: boolean;
 }

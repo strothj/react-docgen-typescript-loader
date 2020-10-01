@@ -82,6 +82,8 @@ function processResource(
     shouldExtractLiteralValuesFromEnum:
       options.shouldExtractLiteralValuesFromEnum,
     savePropValueAsString: options.savePropValueAsString,
+    shouldRemoveUndefinedFromOptional:
+      options.shouldRemoveUndefinedFromOptional,
   };
 
   // Configure parser using settings provided to loader.
