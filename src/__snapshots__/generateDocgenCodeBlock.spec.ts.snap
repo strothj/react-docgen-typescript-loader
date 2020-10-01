@@ -14,6 +14,7 @@ interface SimpleComponentProps {
 export const SimpleComponent: React.SFC<SimpleComponentProps> = props => (
   <button style={{ backgroundColor: props.color }}>{props.children}</button>
 );
+
 try {
     // @ts-ignore
     SimpleComponent.displayName = \\"SimpleComponent\\";
@@ -65,6 +66,7 @@ DefaultPropValueComponent.defaultProps = {
   counter: 123,
   disabled: false,
 };
+
 try {
     // @ts-ignore
     DefaultPropValueComponent.displayName = \\"DefaultPropValueComponent\\";
@@ -92,6 +94,7 @@ export const HyphenatedPropNameComponent: React.SFC<
     {props.children}
   </button>
 );
+
 try {
     // @ts-ignore
     HyphenatedPropNameComponent.displayName = \\"HyphenatedPropNameComponent\\";
@@ -120,6 +123,7 @@ export const MultiPropsComponent: React.SFC<
 > = props => (
   <button style={{ backgroundColor: props.color }}>{props.children}</button>
 );
+
 try {
     // @ts-ignore
     MultiPropsComponent.displayName = \\"MultiPropsComponent\\";
@@ -147,6 +151,7 @@ export const MultilineDescriptionComponent: React.SFC<
 > = props => (
   <button style={{ backgroundColor: props.color }}>{props.children}</button>
 );
+
 try {
     // @ts-ignore
     MultilineDescriptionComponent.displayName = \\"MultilineDescriptionComponent\\";
@@ -176,6 +181,7 @@ export const MultilinePropDescriptionComponent: React.SFC<
 > = props => (
   <button style={{ backgroundColor: props.color }}>{props.children}</button>
 );
+
 try {
     // @ts-ignore
     MultilinePropDescriptionComponent.displayName = \\"MultilinePropDescriptionComponent\\";
@@ -199,6 +205,7 @@ interface SimpleComponentProps {
 export const SimpleComponent: React.SFC<SimpleComponentProps> = props => (
   <button style={{ backgroundColor: props.color }}>{props.children}</button>
 );
+
 try {
     // @ts-ignore
     SimpleComponent.displayName = \\"SimpleComponent\\";
@@ -219,6 +226,7 @@ exports[`component fixture TextOnlyComponent.tsx has code block generated 1`] = 
 export const SimpleComponent: React.SFC<{}> = () => (
   <div>Test only component</div>
 );
+
 try {
     // @ts-ignore
     SimpleComponent.displayName = \\"SimpleComponent\\";
@@ -266,6 +274,7 @@ DefaultPropValueComponent.defaultProps = {
   counter: 123,
   disabled: false,
 };
+
 try {
     // @ts-ignore
     DefaultPropValueComponent.displayName = \\"DefaultPropValueComponent\\";
